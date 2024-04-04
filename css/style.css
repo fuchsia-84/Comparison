@@ -1,0 +1,22 @@
+:root {
+  --color-bg: #fff;
+  --color-main: #333;
+}
+
+:root {
+  --font-family-head: "Montserrat", sans-serif;
+  --font--awesome: "Font Awesome 6 free";
+}
+
+/* break point */
+.br_sp {
+  display: none;
+}
+
+@media screen and (max-width: 1025px) {
+  .br_sp {
+    display: block;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
