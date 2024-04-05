@@ -26,8 +26,13 @@
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
         <!-- Two Tone -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Two+Tone" rel="stylesheet">
-        <!-- /Material Icon -->
-        
+        <!-- //Material Icon -->
+        <!-- Montserrat -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <!-- //Montserrat-->
+
         <!-- Styles -->
         <link rel="stylesheet" href="css/style.css"/>
 
@@ -38,10 +43,204 @@
         <title>Comparison</title>
     </head>
     <body>
-        <header></header>
-        <section>
+        <!-- Header -->
+        <header id="header">
+            <div class="container">
+                <a href="./index.html" class="header_logo pc">
+                    <img src="./img/logo.svg">
+                </a>
+                <a href="./index.html" class="header_logo_sp sp">
+                    <img src="./favicon.svg">
+                </a>
+                <span class="sp_border sp"></span>
+            
+                <ul class="c-nav">
+                    <li><a href="./news.html">お知らせ</a></li>
+                    <li><a href="./about.html">私たちについて</a></li>
+                    <li><a href="./service.html">事業内容</a></li>
+                    <li class="c-header-button blue"><a href="./contact.html">お問い合わせ</a></li>
+                    <li class="c-header-button orange"><a href="./recruit.html">採用情報</a></li>
+                </ul>
+                <div class="toggle sp">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </header>
+        <!-- //Header-->
+        <!-- Top -->
+        <section class="top" id="top">
+            <div class="container">
+                <div class="top-contents">
+                    <div class="hero-message">
+                        <h1>Empower<br>
+                            Happiness<br>
+                            <span>through</span><br>
+                            Technology.
+                        </h1>
+                        <p>技術の力で、未来を紡ぐ。</p>
+                    </div>
+                    <div class="scroll">
+                        <p>scroll</p>
+                    </div>
+                    <a href="./contact.html" class="c-button">CONTACT</a>
+                </div>
+                <div class="slider"></div>
+            </div>
         </section>
-        <footer></footer>
+        <!-- //Top-->
+        <!-- News -->
+        <section class="news" id="news">
+            <div class="container">
+                <div class="news-header">
+                    <h1>NEWS</h1>
+                    <p>お知らせ</p>
+                </div>
+                <ul class="c-news-contents">
+                    <li class="item">
+                        <a href="#">
+                            <p class="date">2024.04.01</p>
+                            <p class="category">WEBサイト</p>
+                            <p class="title">当社ホームページが新しく生まれ変わりました！</p>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <p class="date">2024.04.01</p>
+                            <p class="category">採用情報</p>
+                            <p class="title">新メンバー募集開始！弊社の求人情報をご覧ください。</p>
+                        </a>
+                    </li>
+                    <li class="item">
+                        <a href="#">
+                            <p class="date">2024.04.01</p>
+                            <p class="category">掲載情報</p>
+                            <p class="title">XX新聞に当社が特集されました！</p>
+                        </a>
+                    </li>
+                </ul>
+                <a href="./news.html" class="news-button">もっとみる</a>
+            </div>
+        </section>
+        <!-- //News -->
+        <!-- About -->
+        <section class="about" id="about">
+            <div class="container">
+                <div class="c-section-title">
+                    <h1>ABOUT</h1>
+                    <p>わたしたちについて</p>
+                </div>
+                <h1 class="sub-title">「テクノロジーの力を証明する」</h1>
+                <p>
+                    わたしたちのビジョンは、<br class="br_sp">「テクノロジーの力を証明する」<br class="br_sp">というものです。<br>
+                    このビジョンを掲げ、<br class="br_sp">今後のテクノロジー主導の時代において、<br>
+                    テクノロジーを活用した<br class="br_sp">コンサルティング事業などを通じ<br>
+                    その力を実証しようと考えています。<br>
+                    <br>
+                    私たちは企業の価値と<br class="br_sp">社会的信用力向上に取り組み、<br>
+                    同時に「テクノロジーの力を証明する」<br class="br_sp">ビジョンに向けて、<br>
+                    更なる成長を目指します。
+                </p>
+                <a href="./about/html" class="c-button">MORE</a>
+            </div>
+        </section>
+        <!-- //About-->
+        <!-- Service -->
+        <section class="service" id="service">
+            <div class="container">
+                <div class="c-section-title">
+                    <h1>SERVICE</h1>
+                    <p>事業内容</p>
+                </div>
+                <div class="service-contents">
+                    <div class="c-blue-slash">
+                        <h1><span></span>デジタルメディア<br>ソルーション</h1>
+                        <p>
+                            当社は、主にWEBコンサルティング、<br>
+                            インターネットメディア、そして<br class="br_sp">インターネット広告の分野で<br class="br_sp">事業展開しています。<br>
+                            それぞれのお客様の事業の目的、<br class="br_sp">方針をしっかりとお伺いし、<br class="br_sp">最善の解決策をご提供致します。
+                        </p>
+                        <a href="./service.html" class="c-button">MORE</a>
+                    </div>
+                    <ul>
+                        <li class="c-blue-slash"><span></span>WEBコンサルティング</li>
+                        <li class="c-blue-slash"><span></span>インターネットメディア</li>
+                        <li class="c-blue-slash"><span></span>インターネット広告</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- //Service -->
+        <!-- Contact -->
+        <section class="contact" id="contact">
+            <div class="container">
+                <div class="contact-contents">
+                    <div class="c-bottom-section-title">
+                        <h1>CONTACT</h1>
+                        <p>お問い合わせ</p>
+                    </div>
+                    <p>お気軽にお問い合わせください。</p>
+                    <a href="./contact.html" class="c-button">MORE</a>
+                </div>
+                <img>
+            </div>
+        </section>
+        <!-- //Contact-->
+        <!-- Recruit -->
+        <section class="recruit" id="recruit">
+            <div class="container">
+                <img>
+                <div class="contact-contents">
+                    <div class="c-bottom-section-title">
+                        <h1>RECRUIT</h1>
+                        <p>採用情報</p>
+                    </div>
+                    <p>チームに参加しませんか？</p>
+                    <a href="./recruit.html" class="c-button">MORE</a>
+                </div>
+            </div>
+        </section>
+        <!-- //Recruit-->
+        <footer id="footer">
+            <div class="container">
+                <div class="footer-contents">
+                    <div>
+                        <a href="./index.html" class="header_logo">
+                            <img src="./img/logo.svg">
+                        </a>
+                        <div class="company">
+                            <h1>株式会社 Comparison</h1>
+                            <p>〒123-4567 東京都港区1-18-1</p>
+                        </div>
+                        <ul class="contact-info">
+                            <li><span></span>000-000-0000</li>
+                            <li><span></span>info.comparison.com</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="footer-nav">
+                            <li><a href="./news.html">お知らせ</a></li>
+                            <li><a href="./about.html">私たちについて</a></li>
+                            <li><a href="./service.html">事業内容</a></li>
+                            <li><a href="./contact.html">お問い合わせ</a></li>
+                            <li><a href="./recruit.html">採用情報</a></li>
+                            <li><a href="./privacy_policy.html">プライバシーポリシー</a></li>
+                        </ul>
+                        <ul class="sns-links">
+                            <li><a href="#" alt="facebook">facebook</a></li>
+                            <li><a href="#" alt="X">X</a></li>
+                            <li><a href="#" alt="instagram">instagram</a></li>
+                            <li><a href="#" alt="LINE">LINE</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="copyright">&copy; 2024 Comparison, Inc.</p>
+            </div>
+            <div class="page-top-button">
+                <a href="#">angle-up</a>
+            </div>
+        </footer>
 
         <!-- JQuery-->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
