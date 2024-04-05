@@ -1,0 +1,15 @@
+@use "../foundation/mixin" as m;
+
+.for-contact {
+    background-color: var(--color-for-contact);
+}
+.for-contact::after {
+    content: '\f0e0';
+}
+.for-recruit {
+    background-color: var(--color-for-recruit);
+    margin-left: -3px;
+}
+.for-recruit::after {
+    content: '\f00c';
+}

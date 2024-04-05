@@ -1,0 +1,24 @@
+.c-header-button {
+    display: block;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    font-size: 0.75rem;
+    line-height: 1.0em;
+    letter-spacing: 0.02em;
+    padding-top: 64px;
+    padding-bottom: 24px;
+    border: 3px solid var(--color-header);
+    position: relative;
+}
+.c-header-button::after {
+    display: block;
+    font-family: var(--font-awesome);
+    font-weight: 900;
+    font-size: 2.5rem;
+    line-height: 1.0em;
+    letter-spacing: 0.02em;
+    position: absolute;
+    top: 24px;
+    left: calc(50% - 1.25rem);
+}

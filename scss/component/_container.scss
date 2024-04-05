@@ -1,0 +1,14 @@
+@use "../global/" as g;
+@use "../foundation/mixin" as m;
+
+.c-container {
+    display: block;
+    width: 68%;
+    max-width: 980px;
+    margin: 0 auto;
+}
+@include m.mq(pc) {
+    .c-container {
+        width: calc(100% - 30px);
+    }
+}
