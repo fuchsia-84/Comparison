@@ -1,0 +1,27 @@
+@use "../global/" as g;
+@use "../foundation/mixin" as m;
+
+.c-button {
+    font-size: 1.13rem;
+    line-height: 1.0em;
+    letter-spacing: 0.15em;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    width: 15.0rem;
+    padding: 1.19rem;
+    padding-right: 9.93rem;
+    color: var(--color-main);
+    border: 1px solid var(--color-main);
+    position: relative;
+}
+.c-button::after {
+    position: absolute;
+    top: 1.19rem;
+    right: 1.19rem;
+    content: '\f105';
+    font-family: var(--font-awesome);
+    font-size: 1.13rem;
+    line-height: 1.0em;
+    font-size: 900;
+}

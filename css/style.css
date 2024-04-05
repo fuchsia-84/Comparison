@@ -213,6 +213,7 @@ progress {
 :root {
   --color-bg: #fff;
   --color-main: #333;
+  --color-hero: #fff;
   --color-header: #fff;
   --color-header-fixed-bg: #042771;
   --color-for-contact: #2E63D4;
@@ -220,7 +221,7 @@ progress {
 }
 
 :root {
-  --font-base: "Montserrat", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  --font-base: "Noto Sans", Arial, "Noto Sans JP", Meiryo, sans-serif;
   --font-awesome: "Font Awesome 6 free";
 }
 
@@ -339,12 +340,39 @@ body {
   left: calc(50% - 1.25rem);
 }
 
+.c-button {
+  font-size: 1.13rem;
+  line-height: 1em;
+  letter-spacing: 0.15em;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  width: 15rem;
+  padding: 1.19rem;
+  padding-right: 9.93rem;
+  color: var(--color-main);
+  border: 1px solid var(--color-main);
+  position: relative;
+}
+
+.c-button::after {
+  position: absolute;
+  top: 1.19rem;
+  right: 1.19rem;
+  content: "\f105";
+  font-family: var(--font-awesome);
+  font-size: 1.13rem;
+  line-height: 1em;
+  font-size: 900;
+}
+
 header {
   width: 100%;
   max-width: 100%;
   height: auto;
   background-color: var(--color-header-fixed-bg);
   position: fixed;
+  z-index: 1000;
 }
 header .c-container {
   display: flex;
@@ -374,6 +402,57 @@ header .c-nav :nth-child(3) {
 }
 header .c-nav :nth-child(4), header .c-nav :last-child {
   margin-right: 0;
+}
+
+.top {
+  display: block;
+  width: 100%;
+  height: auto;
+  background-image: url(../../img/top_image.jpg);
+  background-size: cover;
+}
+.top .c-container {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+.top .c-container .top-contents {
+  display: flex;
+  width: 100%;
+  height: auto;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  color: var(--color-hero);
+  position: relative;
+}
+.top .c-container .top-contents .hero-message h1 {
+  display: block;
+  font-size: 96px;
+  line-height: 96px;
+  font-style: italic;
+  font-weight: bold;
+  letter-spacing: 0.02em;
+}
+.top .c-container .top-contents .hero-message h1 span {
+  line-height: 78px;
+  letter-spacing: 0;
+  font-weight: 200;
+}
+.top .c-container .top-contents .hero-message p {
+  font-size: 2rem;
+  line-height: 2em;
+  letter-spacing: 0.05em;
+  display: block;
+  position: absolute;
+  top: 215px;
+  right: 171px;
+}
+.top .c-container .top-contents .hero-message .c-button {
+  color: var(--color-hero);
+  border-color: var(--color-hero);
 }
 
 /*# sourceMappingURL=style.css.map */
