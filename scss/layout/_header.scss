@@ -58,13 +58,48 @@ header {
         .c-container {
             height: 50px;
             padding-left: 15px;
-            .header-logo-sp {
-                img {
-                    width: 2.0rem;
-                    height: 2.0rem;
-                    object-fit: cover;
+            .ui {
+                display: flex;
+                flex-wrap: nowrap;
+                column-gap: 1.0rem;
+                align-items: center;
+                .header-logo-sp {
+                    img {
+                        width: 2.0rem;
+                        height: 2.0rem;
+                        object-fit: cover;
+                    }
                 }
-                
+                .sp-border {
+                    display: block;
+                    width: 1px;
+                    height: 24px;
+                    background-color: var(--color-header);
+                }
+                .toggle {
+                    cursor: pointer;
+                    width: 56px;
+                    height: 50px;
+                    padding: 16px;
+                    position: relative;
+                    span {
+                        display: block;
+                        width: 24px;
+                        height: 2px;
+                        border-radius: 2px;
+                        background-color: var(--color-header);
+                        position: absolute;
+                    }
+                    span:nth-of-type(1) {
+                        top: 16px;
+                    }
+                    span:nth-of-type(2) {
+                        top: 24px;
+                    }
+                    span:nth-of-type(3) {
+                        top: 32px;
+                    }
+                }
             }
             .navigations {
                 .c-nav {

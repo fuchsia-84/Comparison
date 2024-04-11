@@ -749,11 +749,48 @@ header .c-container .navigations .nav-buttons li a {
     height: 50px;
     padding-left: 15px;
   }
-  header .c-container .header-logo-sp img {
+  header .c-container .ui {
+    display: flex;
+    flex-wrap: nowrap;
+    -moz-column-gap: 1rem;
+         column-gap: 1rem;
+    align-items: center;
+  }
+  header .c-container .ui .header-logo-sp img {
     width: 2rem;
     height: 2rem;
     -o-object-fit: cover;
        object-fit: cover;
+  }
+  header .c-container .ui .sp-border {
+    display: block;
+    width: 1px;
+    height: 24px;
+    background-color: var(--color-header);
+  }
+  header .c-container .ui .toggle {
+    cursor: pointer;
+    width: 56px;
+    height: 50px;
+    padding: 16px;
+    position: relative;
+  }
+  header .c-container .ui .toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: var(--color-header);
+    position: absolute;
+  }
+  header .c-container .ui .toggle span:nth-of-type(1) {
+    top: 16px;
+  }
+  header .c-container .ui .toggle span:nth-of-type(2) {
+    top: 24px;
+  }
+  header .c-container .ui .toggle span:nth-of-type(3) {
+    top: 32px;
   }
   header .c-container .navigations .c-nav {
     align-items: start;
