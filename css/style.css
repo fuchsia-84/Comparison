@@ -236,6 +236,7 @@ progress {
   --color-for-recruit-bottom: #E97400;
   --color-footer: #fff;
   --color-copy: #CA9D71;
+  --color-page-top: #042771;
 }
 
 :root {
@@ -1480,7 +1481,31 @@ footer .c-container .footer-contents .menu .sns-links li a {
   text-decoration: none;
 }
 footer .page-top-button {
+  position: fixed;
+  /* To Do: add fixed animation */
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+footer .page-top-button a {
+  font-size: 2rem;
+  line-height: 1em;
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--color-footer);
+  padding: 3.375rem 0.875rem 0.875rem 3.875rem;
+}
+footer .page-top-button::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  background-color: var(--color-page-top);
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(100% 0, 100% 100%, 0 100%);
   position: absolute;
+  z-index: -1;
   right: 0;
   bottom: 0;
 }
