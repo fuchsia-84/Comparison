@@ -265,6 +265,15 @@ body {
     display: block;
   }
 }
+.br_pc {
+  display: block;
+}
+
+@media screen and (max-width: 1025px) {
+  .br_pc {
+    display: none;
+  }
+}
 .sp {
   display: none;
 }
@@ -556,6 +565,11 @@ body {
   left: 2.5rem;
 }
 
+@media screen and (max-width: 1025px) {
+  .c-blue-slash::after {
+    display: none;
+  }
+}
 .c-bottom-section-title {
   color: var(--color-bottom);
 }
@@ -1024,6 +1038,53 @@ header .c-container .navigations .nav-buttons li a {
   line-height: 1em;
 }
 
+@media screen and (max-width: 1025px) {
+  .service .c-container .service-contents {
+    flex-wrap: wrap;
+    -moz-column-gap: 0;
+         column-gap: 0;
+    row-gap: 12px;
+    align-items: start;
+  }
+  .service .c-container .service-contents .service-main {
+    width: 100%;
+    padding: 4.75rem 5px 3.75rem;
+  }
+  .service .c-container .service-contents .service-main h1 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+    margin-bottom: 15px;
+  }
+  .service .c-container .service-contents .service-main h1 span {
+    font-size: 4rem;
+  }
+  .service .c-container .service-contents .service-main p {
+    text-align: center;
+  }
+  .service .c-container .service-contents .service-main .c-button {
+    margin: 3.375rem auto 0;
+  }
+  .service .c-container .service-contents .service-sub {
+    width: 100%;
+    flex-wrap: nowrap;
+    row-gap: 0;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    overflow-x: scroll;
+  }
+  .service .c-container .service-contents .service-sub li {
+    width: calc(50% - 15px);
+    min-width: calc(50% - 15px);
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    padding: 3rem 0.25rem;
+  }
+  .service .c-container .service-contents .service-sub li span {
+    margin-bottom: 10px;
+    font-size: 3rem;
+    line-height: 1em;
+  }
+}
 .contact {
   padding: 140px 0;
   color: var(--color-bottom);

@@ -1,3 +1,6 @@
+@use "../global/" as g;
+@use "../foundation/mixin" as m;
+
 .service {
     padding: 120px 0;
     background-image: url(../../img/service_bg.jpg);
@@ -64,6 +67,58 @@
                         font-size: 4.5rem;
                         line-height: 1.0em;
                     }
+                }
+            }
+        }
+    }
+}
+
+@include m.mq(pc) {
+    .service {
+        .c-container {
+            .service-contents {
+                flex-wrap: wrap;
+                column-gap: 0;
+                row-gap: 12px;
+                align-items: start;
+                .service-main {
+                    width: 100%;
+                    padding: 4.75rem 5px 3.75rem;
+                    h1 {
+                        font-size: 1.25rem;
+                        line-height: 1.5rem;
+                        margin-bottom: 15px;
+                        
+                        span {
+                            font-size: 4.0rem;
+                        }
+                    }
+                    p {
+                        text-align: center;
+                    }
+                    .c-button {
+                        margin: 3.375rem auto 0;
+                    }
+                }
+                .service-sub {
+                    width: 100%;
+                    flex-wrap: nowrap;
+                    row-gap: 0;
+                    column-gap: 10px;
+                    overflow-x: scroll;
+                    li {
+                        width: calc(50% - 15px);
+                        min-width: calc(50% - 15px);
+                        font-size: 0.875rem;
+                        line-height: 1.125rem;
+                        padding: 3.0rem 0.25rem;
+                        span {
+                            margin-bottom: 10px;
+                            font-size: 3.0rem;
+                            line-height: 1.0em;
+                        }
+                    }
+
                 }
             }
         }

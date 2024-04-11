@@ -15,3 +15,9 @@
     top: -1.25rem;
     left: 2.5rem;
 }
+
+@include m.mq(pc) {
+    .c-blue-slash::after {
+        display: none;
+    }
+}
