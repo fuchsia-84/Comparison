@@ -1,0 +1,17 @@
+@use "../global/" as g;
+@use "../foundation/mixin" as m;
+
+.c-blue-slash {
+    position: relative;
+}
+.c-blue-slash::after {
+    display: block;
+    content: '';
+    width: 1.25rem;
+    height: 3.125rem;
+    background: linear-gradient(360deg, var(--color-button-bg-l), var(--color-button-bg-r));
+    transform: skewX(-30deg);
+    position: absolute;
+    top: -1.25rem;
+    left: 2.5rem;
+}

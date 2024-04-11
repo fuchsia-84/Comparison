@@ -1,0 +1,71 @@
+.service {
+    padding: 120px 0;
+    background-image: url(../../img/service_bg.jpg);
+    background-size: cover;
+    .c-container {
+        .c-section-title {
+            color: var(--color-service-bg);
+            h1::after {
+                background-color: var(--color-service-bg);
+            }
+        }
+        .service-contents {
+            display: flex;
+            flex-wrap: nowrap;
+            column-gap: 8%;
+            align-items: center;
+            .service-main {
+                width: 50%;
+                background-color: var(--color-service-bg);
+                padding: 100px 15px 20px;
+                h1 {
+                    text-align: center;
+                    font-size: 2.25rem;
+                    line-height: 1.5em;
+                    margin-bottom: 1.25rem;
+                    span {
+                        display: block;
+                        font-size: 7.5rem;
+                        line-height: 1.0em;
+                        margin-bottom: 3.75rem;
+                    }
+                }
+                p {
+                    font-size: 1.125rem;
+                    line-height: 2.0em;
+                }
+                .c-button {
+                    display: block;
+                    margin-left: 5px;
+                    margin-top: 3.5rem;
+                    color: var(--color-service-bg);
+                    background: linear-gradient(90deg, var(--color-button-bg-l), var(--color-button-bg-r));
+                }
+            }
+            .service-sub {
+                list-style: none;
+                width: 42%;
+                height: 100%;
+                display: flex;
+                flex-wrap: wrap;
+                row-gap: 10px;
+                li {
+                    display: block;
+                    width: 100%;
+                    background-color: var(--color-service-bg);
+                    text-align: center;
+                    font-size: 1.5rem;
+                    line-height: 1.5em;
+                    font-weight: 700;
+                    padding: 2.5rem 0;
+                    span {
+                        margin-bottom: 1.0rem;
+                        display: block;
+                        font-size: 4.5rem;
+                        line-height: 1.0em;
+                    }
+                }
+            }
+        }
+    }
+}
