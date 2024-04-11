@@ -854,7 +854,7 @@ header .c-nav :nth-child(4), header .c-nav :last-child {
   height: 100%;
   display: flex;
   flex-wrap: wrap;
-  row-gap: 10px;
+  row-gap: 30px;
 }
 .service .c-container .service-contents .service-sub li {
   display: block;
