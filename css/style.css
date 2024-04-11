@@ -488,6 +488,7 @@ body {
   }
   .c-news-contents li a .title {
     order: 1;
+    white-space: wrap;
   }
   .c-news-contents li a::after {
     content: "";
