@@ -1,0 +1,73 @@
+@use "../global/" as g;
+@use "../foundation/mixin" as m;
+
+.c-scroll {
+    margin-inline: auto;
+    position: relative;
+    width: fit-content;
+    color: var(--color-hero);
+    span {
+        position: absolute;
+        font-size: 1.125rem;
+        line-height: 1.5rem;
+        top: 0;
+        right: -1.625rem;
+        writing-mode: vertical-rl;
+    }
+    
+}
+.c-scroll::before {
+    animation: 2s scroll infinite;
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: var(--color-hero);
+    border-radius: 1.5px;
+    width: 3px;
+    height: 10px;
+    margin: auto;
+}
+.c-scroll::after {
+    content: '';
+    display: block;
+    width: 34px;
+    height: 55px;
+    border: 2px solid var(--color-hero);
+    border-radius: 25px;
+    margin-inline: auto;
+}
+
+/* アニメーション */
+@keyframes scroll {
+    0% {
+        opacity: 0;
+        top: 10%;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        top: 40%;
+    }
+}
+
+@include m.mq(pc) {
+    .c-scroll {
+        span {
+            font-size: 0.75rem;
+            line-height: 1.0em;
+            right: -1.0rem;
+        }
+    }
+    .c-scroll::before {
+        border-radius: 1px;
+        width: 2px;
+        height: 5px;
+    }
+    .c-scroll::after {
+        width: 20px;
+        height: 32.35px;
+    }
+}

@@ -14,15 +14,20 @@
         justify-content: center;
         width: 100%;
         height: 100vh;
+        .slider {
+            display: none;
+        }
         .top-contents {
             display: flex;
             width: 100%;
             height: auto;
             flex-wrap: nowrap;
             justify-content: space-between;
+            align-items: flex-end;
             color: var(--color-hero);
             position: relative;
             .hero-message {
+                flex-grow: 1;
                 h1 {
                     display: block;
                     font-size: 6.0rem;
@@ -50,7 +55,9 @@
                     border-color: var(--color-hero);
                 }
             }
-            
+            .c-scroll {
+                margin-right: 2.0rem;
+            }
         }
         
     }
@@ -75,6 +82,9 @@
                         margin-bottom: 1.75rem;
                         font-size: 1.125rem;
                     }
+                }
+                .c-scroll {
+                    margin-right: 1.0rem;
                 }
             }
         }
