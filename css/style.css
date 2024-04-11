@@ -851,6 +851,15 @@ header .c-container .navigations .nav-buttons li a {
     margin-right: 1rem;
   }
 }
+@media screen and (max-width: 756px) {
+  .top .c-container .top-contents {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .top .c-container .top-contents .c-scroll {
+    margin-top: -32.35px;
+  }
+}
 .news {
   margin-top: -12.75rem;
   margin-bottom: 2.75rem;

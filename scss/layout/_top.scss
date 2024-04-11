@@ -90,3 +90,18 @@
         }
     }
 }
+
+@include m.mq(tab) {
+    .top {
+        .c-container {
+            .top-contents {
+                flex-wrap: wrap;
+                justify-content: flex-start;
+                .c-scroll {
+                    margin-top: -32.35px;
+                }
+            }
+        }
+    }
+    
+}
