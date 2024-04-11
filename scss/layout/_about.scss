@@ -1,0 +1,52 @@
+.about {
+    padding: 120px 0;
+    position: relative;
+    .c-container {
+        .sub-title {
+            text-align: center;
+            font-size: 2.25rem;
+            line-height: 1.0em;
+            letter-spacing: 0.15em;
+            font-weight: 700;
+            color: var(--color-about-sub);
+            margin-bottom: 3.0rem;
+        }
+        p {
+            font-size: 1.125rem;
+            line-height: 2.0em;
+            letter-spacing: 0.05em;
+            font-weight: 400;
+            margin-bottom: 3.0rem;
+        }
+        .c-button {
+            display: block;
+            color: var(--color-button);
+            background: linear-gradient(90deg, var(--color-button-bg-l), var(--color-button-bg-r));
+        }
+    }
+}
+.about::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -2;
+    top: -120px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 120px);
+    background-color: var(--color-about-bg);
+    clip-path: polygon(0 0, calc(100% - 10%) 0, calc(100% - 51%) 100%, 0 100%);
+}
+.about::after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    top: 10.0rem;
+    right: 3.0rem;
+    width: 50%;
+    height: 100%;
+    max-width: 52rem;
+    background-image: url(../../img/message_bg.svg);
+    background-size: contain;
+}
