@@ -1,3 +1,6 @@
+@use "../global/" as g;
+@use "../foundation/mixin" as m;
+
 .c-header-button {
     display: block;
     width: 100px;
@@ -21,4 +24,19 @@
     position: absolute;
     top: 24px;
     left: calc(50% - 1.25rem);
+}
+
+@include m.mq(pc) {
+    .c-header-button {
+        width: 50px;
+        height: 50px;
+        font-size: 0.375rem;
+        padding-top: 32px;
+        padding-bottom: 12px;
+    }
+    .c-header-button::after {
+        font-size: 1.25rem;
+        top: 12px;
+        left: calc(50% - 0.625rem);
+    }
 }

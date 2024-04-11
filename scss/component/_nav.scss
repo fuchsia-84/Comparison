@@ -1,16 +1,42 @@
+@use "../global/" as g;
+@use "../foundation/mixin" as m;
+
 .c-nav {
     list-style: none;
     display: flex;
     flex-wrap: nowrap;
     align-items: flex-start;
-}
-.c-nav li {
-    margin-right: 20px;
-}
-.c-nav:last-child {
-    margin-right: 0;
+    column-gap: 20px;
 }
 .c-nav li a {
     cursor: pointer;
     text-decoration: none;
+}
+
+@include m.mq(pc) {
+    .c-nav {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        flex-wrap: wrap;
+        column-gap: 0;
+        row-gap: 60px;
+        li {
+            width: 100%;
+            a {
+                text-align: center;
+            }
+        }
+    }
+    /*
+    .c-nav::before {
+        content: '';
+        display: block;
+        width: 100%;
+        height: calc(100vh - 50px);
+        background-color: var(--color-nav-sp-bg);
+    }
+    */
+    
 }

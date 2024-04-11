@@ -1,8 +1,11 @@
+@use "../global/" as g;
+@use "../foundation/mixin" as m;
+
 header {
     width: 100%;
     max-width: 100%;
     height: auto;
-    background-color: var(--color-header-fixed-bg);
+    background-color: transparent;
     position: fixed;
     z-index: 1000;
     .c-container {
@@ -14,25 +17,73 @@ header {
         padding-left: 50px;
         align-items: center;
         justify-content: space-between;
-    }
-    .c-nav {
-        color: var(--color-header);
-        align-items: center;
-        font-size: 1.0rem;
-        line-height: 1.0em;
-        font-weight: bold;
-        li {
-            margin-right: 20px;
-            a {
+        .navigations {
+            display: flex;
+            flex-wrap: nowrap;
+            .c-nav {
                 color: var(--color-header);
+                align-items: center;
+                font-size: 1.0rem;
+                line-height: 1.0em;
+                font-weight: bold;
+                margin-right: 30px;
+                li {
+                    a {
+                        color: var(--color-header);
+                    }
+                }
+                :nth-child(4), :nth-child(5) {
+                    display: none;
+                }
+            }
+            .nav-buttons {
+                list-style: none;
+                display: flex;
+                flex-wrap: nowrap;
+                li {
+                    a {
+                        text-decoration: none;
+                        color: var(--color-header);
+                    }
+                }
+            }
+
+        }
+        
+    }
+    
+}
+@include m.mq(pc) {
+    header {
+        .c-container {
+            height: 50px;
+            padding-left: 15px;
+            .header-logo-sp {
+                img {
+                    width: 2.0rem;
+                    height: 2.0rem;
+                    object-fit: cover;
+                }
+                
+            }
+            .navigations {
+                .c-nav {
+                    align-items: start;
+                    margin-right: 0;
+                    font-size: 1.125rem;
+                    line-height: 1.5rem;
+                    letter-spacing: 0.05em;
+                    :nth-child(4), :nth-child(5) {
+                        display: inline-block;
+                    }
+                    li {
+                        a {
+                            color: var(--color-nav-sp);
+                        }
+                    }
+                }
             }
         }
-        :nth-child(3) {
-            margin-right: 30px;
-        }
-        :nth-child(4), :last-child {
-            margin-right: 0;
-        }
+        
     }
-
 }
