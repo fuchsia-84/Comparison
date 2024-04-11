@@ -228,6 +228,8 @@ progress {
   --color-button-bg-r: #2E63D4;
   --color-about-bg: #eee;
   --color-service-bg: #fff;
+  --color-bottom: #fff;
+  --color-bottom-line: #FF7F00;
 }
 
 :root {
@@ -483,6 +485,49 @@ body {
   left: 2.5rem;
 }
 
+.c-bottom-section-title {
+  color: var(--color-bottom);
+}
+.c-bottom-section-title h1 {
+  font-size: 4rem;
+  line-height: 1.5em;
+  font-weight: 900;
+}
+.c-bottom-section-title h1::after {
+  content: "";
+  display: block;
+  width: 1.375rem;
+  height: 0.25rem;
+  margin-top: -2px;
+  background-color: var(--color-bottom);
+}
+.c-bottom-section-title p {
+  display: block;
+  margin-top: -0.75rem;
+  margin-left: 2.125rem;
+  font-size: 1rem;
+  line-height: 1.125rem;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 1025px) {
+  .c-bottom-section-title h1 {
+    font-size: 2, 0rem;
+    line-height: 1.5em;
+  }
+  .c-bottom-section-title h1::after {
+    width: 0.75rem;
+    height: 1px;
+    margin: 1px auto 0;
+  }
+  .c-bottom-section-title p {
+    margin: 0;
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    line-height: 1em;
+  }
+}
 header {
   width: 100%;
   max-width: 100%;
@@ -825,6 +870,71 @@ header .c-nav :nth-child(4), header .c-nav :last-child {
   display: block;
   font-size: 4.5rem;
   line-height: 1em;
+}
+
+.contact {
+  padding: 140px 0;
+  color: var(--color-bottom);
+  background: linear-gradient(12deg, var(--color-button-bg-l), var(--color-button-bg-r));
+  position: relative;
+}
+.contact .c-container .contact-contents .bottom-text {
+  margin: 30px 0;
+}
+.contact .c-container .contact-contents .c-button {
+  display: block;
+  color: var(--color-bottom);
+  border-color: var(--color-bottom);
+}
+.contact .c-container img {
+  display: block;
+  width: 50%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-clip-path: polygon(42% 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(42% 0, 100% 0, 100% 100%, 0 100%);
+  z-index: 2;
+}
+
+.contact::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 50%;
+  height: 5px;
+  background-color: var(--color-bottom-line);
+  z-index: 3;
+  top: 2.5rem;
+  right: 0;
+}
+
+@media screen and (max-width: 1025px) {
+  .contact {
+    padding: 3rem 0;
+    background: linear-gradient(45deg, var(--color-button-bg-l), var(--color-button-bg-r));
+  }
+  .contact .c-container .contact-contents {
+    text-align: center;
+  }
+  .contact .c-container .contact-contents .bottom-text {
+    margin: 0.75rem 0;
+  }
+  .contact .c-container .contact-contents .c-button {
+    display: inline-block;
+    border: none;
+    background: var(--color-bottom);
+    color: var(--color-for-contact);
+  }
+  .contact .c-container img {
+    display: none;
+  }
+  .contact::after {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
