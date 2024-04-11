@@ -858,6 +858,7 @@ header .c-container .navigations .nav-buttons li a {
 .news .c-container {
   display: flex;
   flex-wrap: nowrap;
+  width: 100%;
   position: relative;
   border: 5px solid var(--color-news-header);
   background-color: var(--color-news-header);
@@ -865,6 +866,7 @@ header .c-container .navigations .nav-buttons li a {
 .news .c-container .news-header {
   display: flex;
   flex-wrap: wrap;
+  width: 20%;
   justify-content: center;
   align-items: center;
   color: var(--color-news-header);
@@ -886,6 +888,7 @@ header .c-container .navigations .nav-buttons li a {
 }
 .news .c-container .c-news-contents {
   padding: 2rem;
+  width: 100%;
 }
 .news .c-container .news-button {
   cursor: pointer;
