@@ -2,6 +2,8 @@
 @use "../foundation/mixin" as m;
 
 header {
+    /* To Do: when header fixed, change background-color */
+
     width: 100%;
     max-width: 100%;
     height: auto;
@@ -22,7 +24,6 @@ header {
             flex-wrap: nowrap;
             .c-nav {
                 color: var(--color-header);
-                align-items: center;
                 font-size: 1.0rem;
                 line-height: 1.0em;
                 font-weight: bold;
@@ -77,6 +78,7 @@ header {
                     background-color: var(--color-header);
                 }
                 .toggle {
+                    /* To Do: toggle button clicked, change spans to 'x'. */
                     cursor: pointer;
                     width: 56px;
                     height: 50px;
@@ -103,22 +105,56 @@ header {
             }
             .navigations {
                 .c-nav {
-                    align-items: start;
+                    display: none;
+                    /* To Do: toggle button clicked, change display block*/
+                    position: absolute;
+                    top: 50px;
+                    left: 0;
+                    width: 100%;
+                    height: calc(100vh - 50px);
+                    padding: calc((50vh - 25px) - (7.5rem + 240px)*0.5) 0 0;
+                    background-color: var(--color-nav-sp-bg);
+                    flex-wrap: wrap;
+                    column-gap: 0;
                     margin-right: 0;
                     font-size: 1.125rem;
                     line-height: 1.5rem;
                     letter-spacing: 0.05em;
                     :nth-child(4), :nth-child(5) {
-                        display: inline-block;
+                        display: list-item;
                     }
                     li {
+                        display: block;
+                        width: 68%;
+                        max-width: 980px;
+                        margin: 0 auto 60px;
                         a {
                             color: var(--color-nav-sp);
+                            text-align: center;
                         }
+                    }
+                    li:nth-of-type(5) {
+                    margin-bottom: 0;
                     }
                 }
             }
         }
         
     }
+}
+@include m.mq(tab) {
+    header {
+        .c-container {
+            .navigations {
+                .c-nav {
+                    li {
+                        width: 48%;
+                        max-width: 360px;
+                        min-width: 180px;
+                    }
+                }
+            }
+        }
+    }
+
 }

@@ -326,7 +326,7 @@ body {
   list-style: none;
   display: flex;
   flex-wrap: nowrap;
-  align-items: flex-start;
+  align-items: center;
   -moz-column-gap: 20px;
        column-gap: 20px;
 }
@@ -336,33 +336,6 @@ body {
   text-decoration: none;
 }
 
-@media screen and (max-width: 1025px) {
-  .c-nav {
-    position: absolute;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    flex-wrap: wrap;
-    -moz-column-gap: 0;
-         column-gap: 0;
-    row-gap: 60px;
-  }
-  .c-nav li {
-    width: 100%;
-  }
-  .c-nav li a {
-    text-align: center;
-  }
-  /*
-  .c-nav::before {
-      content: '';
-      display: block;
-      width: 100%;
-      height: calc(100vh - 50px);
-      background-color: var(--color-nav-sp-bg);
-  }
-  */
-}
 .c-header-button {
   display: block;
   width: 100px;
@@ -722,7 +695,6 @@ header .c-container .navigations {
 }
 header .c-container .navigations .c-nav {
   color: var(--color-header);
-  align-items: center;
   font-size: 1rem;
   line-height: 1em;
   font-weight: bold;
@@ -793,17 +765,44 @@ header .c-container .navigations .nav-buttons li a {
     top: 32px;
   }
   header .c-container .navigations .c-nav {
-    align-items: start;
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 50px);
+    padding: calc(50vh - 25px - (7.5rem + 240px) * 0.5) 0 0;
+    background-color: var(--color-nav-sp-bg);
+    flex-wrap: wrap;
+    -moz-column-gap: 0;
+         column-gap: 0;
     margin-right: 0;
     font-size: 1.125rem;
     line-height: 1.5rem;
     letter-spacing: 0.05em;
   }
   header .c-container .navigations .c-nav :nth-child(4), header .c-container .navigations .c-nav :nth-child(5) {
-    display: inline-block;
+    display: list-item;
+  }
+  header .c-container .navigations .c-nav li {
+    display: block;
+    width: 68%;
+    max-width: 980px;
+    margin: 0 auto 60px;
   }
   header .c-container .navigations .c-nav li a {
     color: var(--color-nav-sp);
+    text-align: center;
+  }
+  header .c-container .navigations .c-nav li:nth-of-type(5) {
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 756px) {
+  header .c-container .navigations .c-nav li {
+    width: 48%;
+    max-width: 360px;
+    min-width: 180px;
   }
 }
 .top {
