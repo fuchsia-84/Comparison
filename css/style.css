@@ -212,7 +212,8 @@ progress {
 }
 
 :root {
-  --color-bg: #fff;
+  --color-bg-t: #fff;
+  --color-bg-b: #698DD9;
   --color-main: #333;
   --color-hero: #fff;
   --color-header: #fff;
@@ -255,7 +256,7 @@ html {
 
 body {
   font-family: var(--font-base);
-  background-color: var(--color-bg);
+  background: linear-gradient(180deg, var(--color-bg-t) 40%, var(--color-bg-b) 100%);
   color: var(--color-main);
 }
 
