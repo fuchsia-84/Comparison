@@ -1512,4 +1512,74 @@ footer .page-top-button::before {
   bottom: 0;
 }
 
+@media screen and (max-width: 1025px) {
+  footer {
+    margin-top: 0;
+    padding: 40px 0 0;
+    /* To Do: fix logo. */
+  }
+  footer .c-container .copyright {
+    padding: 1.25rem 0;
+  }
+  footer .c-container .footer-contents {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    row-gap: 1.5rem;
+    margin-bottom: 40px;
+  }
+  footer .c-container .footer-contents .info .company h1 {
+    margin-top: 5px;
+  }
+  footer .c-container .footer-contents .info .company p {
+    margin-top: 5px;
+  }
+  footer .c-container .footer-contents .info .contact-info {
+    margin-top: 10px;
+  }
+  footer .c-container .footer-contents .info .contact-info li {
+    font-size: 1.125rem;
+    -moz-column-gap: 5px;
+         column-gap: 5px;
+    margin-bottom: 5px;
+  }
+  footer .c-container .footer-contents .info .contact-info li span {
+    font-size: 1.25rem;
+    line-height: 2rem;
+  }
+  footer .c-container .footer-contents .info .contact-info li:nth-of-type(2) {
+    font-size: 0.75rem;
+  }
+  footer .c-container .footer-contents .menu {
+    width: 100%;
+  }
+  footer .c-container .footer-contents .menu .footer-nav {
+    height: 5.375rem;
+    row-gap: 1rem;
+  }
+  footer .c-container .footer-contents .menu .footer-nav li {
+    font-size: 0.75rem;
+    line-height: 1.5em;
+  }
+  footer .c-container .footer-contents .menu .footer-nav li:last-of-type {
+    font-size: 0.625rem;
+  }
+  footer .c-container .footer-contents .menu .sns-links {
+    justify-content: left;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+    margin-top: 1.5rem;
+  }
+  footer .c-container .footer-contents .menu .sns-links li {
+    font-size: 1.5rem;
+  }
+  footer .page-top-button a {
+    font-size: 1.125rem;
+    padding: 1.625rem 0.375rem 0.375rem 1.875rem;
+  }
+  footer .page-top-button::before {
+    width: 50px;
+    height: 50px;
+  }
+}
+
 /*# sourceMappingURL=style.css.map */
