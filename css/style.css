@@ -232,6 +232,7 @@ progress {
   --color-button-bg-r: #2E63D4;
   --color-about-bg: #eee;
   --color-service-bg: #fff;
+  --color-service-scroll: #1C3B7D;
   --color-bottom: #fff;
   --color-bottom-line: #FF7F00;
   --color-for-recruit-bottom: #E97400;
@@ -1227,7 +1228,7 @@ header .c-container .navigations .nav-buttons li a {
     -moz-column-gap: 10px;
          column-gap: 10px;
     overflow-x: scroll;
-    /* To Do: scroll bar custom */
+    padding-bottom: 20px;
   }
   .service .c-container .service-contents .service-sub li {
     width: calc(50% - 15px);
@@ -1241,6 +1242,15 @@ header .c-container .navigations .nav-buttons li a {
     margin-bottom: 10px;
     font-size: 3rem;
     line-height: 1em;
+  }
+  .service .c-container .service-contents .service-sub::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+  }
+  .service .c-container .service-contents .service-sub::-webkit-scrollbar-thumb {
+    background-color: var(--color-service-scroll);
+    border-radius: 5px;
   }
 }
 .contact {

@@ -107,7 +107,7 @@
                     row-gap: 0;
                     column-gap: 10px;
                     overflow-x: scroll;
-                    /* To Do: scroll bar custom */
+                    padding-bottom: 20px;
                     li {
                         width: calc(50% - 15px);
                         min-width: 10.5rem;
@@ -121,7 +121,15 @@
                             line-height: 1.0em;
                         }
                     }
-
+                }
+                .service-sub::-webkit-scrollbar {
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 5px;
+                }
+                .service-sub::-webkit-scrollbar-thumb {
+                    background-color: var(--color-service-scroll);
+                    border-radius: 5px;
                 }
             }
         }
