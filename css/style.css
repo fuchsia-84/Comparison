@@ -801,7 +801,6 @@ header.fixed {
     background-color: var(--color-header);
   }
   header .c-container .ui .toggle {
-    /* To Do: toggle button clicked, change spans to 'x'. */
     cursor: pointer;
     width: 56px;
     height: 50px;
@@ -815,6 +814,7 @@ header.fixed {
     border-radius: 2px;
     background-color: var(--color-header);
     position: absolute;
+    transition: 0.35s ease-in-out;
   }
   header .c-container .ui .toggle span:nth-of-type(1) {
     top: 16px;
@@ -826,45 +826,85 @@ header.fixed {
     top: 32px;
   }
   header .c-container .navigations .c-nav {
-    display: none;
-    /* To Do: toggle button clicked, change display block*/
+    transition: 0.35s ease-in;
+    opacity: 0;
+    visibility: hidden;
     position: absolute;
-    top: 50px;
+    top: -100vh;
     left: 0;
     width: 100%;
     height: calc(100vh - 50px);
-    padding: calc(50vh - 25px - (7.5rem + 240px) * 0.5) 0 0;
+    /*
+    align-items: flex-start;
+    justify-content: center;
+    */
+    flex-direction: column;
+    padding: 24vh 0;
+    /*
+    padding: calc((50vh - 25px) - (7.5rem + 240px)*0.5) 16% 0;
+    */
     background-color: var(--color-nav-sp-bg);
     flex-wrap: wrap;
     -moz-column-gap: 0;
          column-gap: 0;
     margin-right: 0;
+    /*
+    row-gap: 3.75rem;
+    */
     font-size: 1.125rem;
     line-height: 1.5rem;
     letter-spacing: 0.05em;
+    /*
+    li:nth-of-type(5) {
+    margin-bottom: 0;
+    }
+    */
   }
   header .c-container .navigations .c-nav :nth-child(4), header .c-container .navigations .c-nav :nth-child(5) {
     display: list-item;
   }
   header .c-container .navigations .c-nav li {
+    /*
     display: block;
     width: 68%;
     max-width: 980px;
-    margin: 0 auto 60px;
+    */
+    width: 68%;
+    flex-grow: 0.2;
+    text-align: center;
   }
   header .c-container .navigations .c-nav li a {
     color: var(--color-nav-sp);
-    text-align: center;
-  }
-  header .c-container .navigations .c-nav li:nth-of-type(5) {
-    margin-bottom: 0;
   }
 }
+header.open .c-container .ui .toggle span:nth-of-type(1) {
+  top: 24px;
+  transform: rotate(315deg);
+}
+header.open .c-container .ui .toggle span:nth-of-type(2) {
+  width: 0;
+  left: 50%;
+}
+header.open .c-container .ui .toggle span:nth-of-type(3) {
+  top: 24px;
+  transform: rotate(-315deg);
+}
+header.open .c-container .navigations .c-nav {
+  top: 50px;
+  opacity: 1;
+  visibility: visible;
+  /*
+  li {
+      width: 100%;
+      max-width: 100%;
+      flex-grow: 1;
+  }
+  */
+}
+
 @media screen and (max-width: 756px) {
   header .c-container .navigations .c-nav li {
-    width: 48%;
-    max-width: 360px;
-    min-width: 180px;
+    text-align: left;
   }
 }
 .top {
