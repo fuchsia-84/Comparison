@@ -2,7 +2,6 @@
 @use "../foundation/mixin" as m;
 
 header {
-    /* To Do: when header fixed, change background-color */
 
     width: 100%;
     max-width: 100%;
@@ -53,6 +52,17 @@ header {
         
     }
     
+}
+header.fixed {
+    background-color: var(--color-header-fixed-bg);
+    @include m.animation(
+        $name: fade-in,
+        $duration: 1.5s,
+        $timing-function: ease,
+        $delay: 0s,
+        $iteration-count: 1,
+        $direction: normal,
+    );
 }
 @include m.mq(pc) {
     header {
