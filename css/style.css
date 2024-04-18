@@ -1192,6 +1192,9 @@ header .c-container .navigations .nav-buttons li a {
 }
 
 @media screen and (max-width: 1025px) {
+  .service {
+    padding: 80px 0;
+  }
   .service .c-container .service-contents {
     flex-wrap: wrap;
     -moz-column-gap: 0;
@@ -1228,10 +1231,11 @@ header .c-container .navigations .nav-buttons li a {
   }
   .service .c-container .service-contents .service-sub li {
     width: calc(50% - 15px);
-    min-width: calc(50% - 15px);
+    min-width: 10.5rem;
     font-size: 0.875rem;
     line-height: 1.125rem;
     padding: 3rem 0.25rem;
+    white-space: nowrap;
   }
   .service .c-container .service-contents .service-sub li span {
     margin-bottom: 10px;

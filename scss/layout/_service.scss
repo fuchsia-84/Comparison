@@ -75,6 +75,7 @@
 
 @include m.mq(pc) {
     .service {
+        padding: 80px 0;
         .c-container {
             .service-contents {
                 flex-wrap: wrap;
@@ -109,10 +110,11 @@
                     /* To Do: scroll bar custom */
                     li {
                         width: calc(50% - 15px);
-                        min-width: calc(50% - 15px);
+                        min-width: 10.5rem;
                         font-size: 0.875rem;
                         line-height: 1.125rem;
                         padding: 3.0rem 0.25rem;
+                        white-space: nowrap;
                         span {
                             margin-bottom: 10px;
                             font-size: 3.0rem;
