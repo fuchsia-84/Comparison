@@ -576,7 +576,7 @@ body {
 
 @media screen and (max-width: 1025px) {
   .c-bottom-section-title h1 {
-    font-size: 2, 0rem;
+    font-size: 2rem;
     line-height: 1.5em;
   }
   .c-bottom-section-title h1::after {
