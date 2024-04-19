@@ -709,6 +709,7 @@ body {
   }
 }
 header {
+  /* To Do: add hover animation to global navigation. */
   width: 100%;
   max-width: 100%;
   height: auto;
@@ -1169,31 +1170,6 @@ header.open .c-container .navigations .c-nav {
     border: 0;
     flex-wrap: wrap;
     background-color: transparent;
-    /*
-    .news-button {
-        clip-path: none;
-        background-color: transparent;
-        color: var(--color-news-header-bg);
-        border: 1px solid var(--color-news-header-bg);
-        position: relative;
-        bottom: 0;
-        right: 0;
-        font-size: 0.75rem;
-        line-height: 1.0em;
-        width: 9.375rem;
-        padding: 0.75rem;
-        padding-right: 4.375rem;
-        white-space: nowrap;
-        margin-left: 15px;
-        margin-bottom: 20px;
-    }
-    */
-    /*
-    .news-button:hover {
-        color: var(--color-news-header);
-        background-color: var(--color-news-header-bg);
-    }
-    */
   }
   .news .c-container .c-news-contents {
     background-color: var(--color-news-header);
@@ -1246,10 +1222,7 @@ header.open .c-container .navigations .c-nav {
     background-color: var(--color-news-header);
     text-decoration: none;
   }
-  .news .c-container .news-button span i { /*
- bottom: 0.75rem;
- right: 0.75rem;
- */
+  .news .c-container .news-button span i {
     font-size: 0.75rem;
     line-height: 1em;
   }
@@ -1640,6 +1613,7 @@ header.open .c-container .navigations .c-nav {
   }
 }
 footer {
+  /* To Do: add hover style to navigation. */
   margin-top: 120px;
   padding: 120px 0 0;
   color: var(--color-footer);
