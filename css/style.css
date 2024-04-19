@@ -900,6 +900,7 @@ header.open .c-container .navigations .c-nav {
   height: auto;
   min-height: 820px;
   position: relative;
+  overflow-x: hidden;
 }
 .top .slide {
   display: block;
@@ -1005,7 +1006,7 @@ header.open .c-container .navigations .c-nav {
     min-height: 600px;
   }
   .top .c-container .top-contents {
-    padding: 0 35px;
+    width: 80%;
   }
   .top .c-container .top-contents .hero-message h1 {
     font-size: 3.5rem;
@@ -1033,6 +1034,7 @@ header.open .c-container .navigations .c-nav {
     right: 35px;
   }
   .top .c-container .top-contents {
+    width: 96%;
     flex-wrap: wrap;
     justify-content: flex-start;
   }
