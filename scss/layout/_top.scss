@@ -2,11 +2,10 @@
 @use "../foundation/mixin" as m;
 
 .top {
-    /* To Do: add min-height */
-    /* To Do: fix hero message for sp (less than 300px width)*/
         display: block;
         width: 100%;
         height: auto;
+        min-height: 820px;
         background-image: url(../../img/top_image.jpg);
         background-size: cover;
     .c-container {
@@ -40,7 +39,7 @@
                     span {
                         line-height: 4.875rem;
                         letter-spacing: 0;
-                        font-weight: 200;
+                        font-weight: 500;
                     }
                 }
                 p {
@@ -67,6 +66,7 @@
 
 @include m.mq(pc) {
     .top {
+        min-height: 600px;
         .c-container {
             .top-contents {
                 padding: 0 35px;
@@ -95,6 +95,7 @@
 
 @include m.mq(tab) {
     .top {
+        min-height: 820px;
         .c-container {
             .top-contents {
                 flex-wrap: wrap;
@@ -105,5 +106,26 @@
             }
         }
     }
-    
+}
+@include m.mq(sp) {
+    .top {
+        .c-container {
+            .top-contents {
+                .hero-message {
+                    h1 {
+                        font-size: 2.5rem;
+                        line-height: 3.0rem;
+                        span {
+                            font-size: 1.8rem;
+                            line-height: 2.2rem;
+                        }
+                    }
+                    p {
+                        margin-bottom: 1.5rem;
+                        font-size: 1.0rem;
+                    }
+                }
+            }
+        }
+    }
 }

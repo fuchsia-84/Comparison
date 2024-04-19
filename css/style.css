@@ -259,6 +259,7 @@ body {
   font-family: var(--font-base);
   background: linear-gradient(180deg, var(--color-bg-t) 40%, var(--color-bg-b) 100%);
   color: var(--color-main);
+  /* To Do: add min-width/height */
 }
 
 /* animation */
@@ -834,41 +835,21 @@ header.fixed {
     left: 0;
     width: 100%;
     height: calc(100vh - 50px);
-    /*
-    align-items: flex-start;
-    justify-content: center;
-    */
     flex-direction: column;
     padding: 24vh 0;
-    /*
-    padding: calc((50vh - 25px) - (7.5rem + 240px)*0.5) 16% 0;
-    */
     background-color: var(--color-nav-sp-bg);
     flex-wrap: wrap;
     -moz-column-gap: 0;
          column-gap: 0;
     margin-right: 0;
-    /*
-    row-gap: 3.75rem;
-    */
     font-size: 1.125rem;
     line-height: 1.5rem;
     letter-spacing: 0.05em;
-    /*
-    li:nth-of-type(5) {
-    margin-bottom: 0;
-    }
-    */
   }
   header .c-container .navigations .c-nav :nth-child(4), header .c-container .navigations .c-nav :nth-child(5) {
     display: list-item;
   }
   header .c-container .navigations .c-nav li {
-    /*
-    display: block;
-    width: 68%;
-    max-width: 980px;
-    */
     width: 68%;
     flex-grow: 0.2;
     text-align: center;
@@ -893,13 +874,6 @@ header.open .c-container .navigations .c-nav {
   top: 50px;
   opacity: 1;
   visibility: visible;
-  /*
-  li {
-      width: 100%;
-      max-width: 100%;
-      flex-grow: 1;
-  }
-  */
 }
 
 @media screen and (max-width: 756px) {
@@ -908,10 +882,10 @@ header.open .c-container .navigations .c-nav {
   }
 }
 .top {
-  /* To Do: add min-height */
   display: block;
   width: 100%;
   height: auto;
+  min-height: 820px;
   background-image: url(../../img/top_image.jpg);
   background-size: cover;
 }
@@ -950,7 +924,7 @@ header.open .c-container .navigations .c-nav {
 .top .c-container .top-contents .hero-message h1 span {
   line-height: 4.875rem;
   letter-spacing: 0;
-  font-weight: 200;
+  font-weight: 500;
 }
 .top .c-container .top-contents .hero-message p {
   font-size: 2rem;
@@ -970,6 +944,9 @@ header.open .c-container .navigations .c-nav {
 }
 
 @media screen and (max-width: 1025px) {
+  .top {
+    min-height: 600px;
+  }
   .top .c-container .top-contents {
     padding: 0 35px;
   }
@@ -991,12 +968,29 @@ header.open .c-container .navigations .c-nav {
   }
 }
 @media screen and (max-width: 756px) {
+  .top {
+    min-height: 820px;
+  }
   .top .c-container .top-contents {
     flex-wrap: wrap;
     justify-content: flex-start;
   }
   .top .c-container .top-contents .c-scroll {
     margin-top: -32.35px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .top .c-container .top-contents .hero-message h1 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+  .top .c-container .top-contents .hero-message h1 span {
+    font-size: 1.8rem;
+    line-height: 2.2rem;
+  }
+  .top .c-container .top-contents .hero-message p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
   }
 }
 .news {
