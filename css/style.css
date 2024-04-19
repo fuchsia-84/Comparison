@@ -260,7 +260,7 @@ body {
   font-family: var(--font-base);
   background: linear-gradient(180deg, var(--color-bg-t) 40%, var(--color-bg-b) 100%);
   color: var(--color-main);
-  /* To Do: add min-width/height */
+  min-width: 280px;
 }
 
 /* animation */
@@ -910,10 +910,12 @@ header.open .c-container .navigations .c-nav {
   left: 0;
   width: 100%;
   height: 100vh;
+  min-height: 820px;
 }
 .top .slide .item img {
   width: 100%;
   height: 100vh;
+  min-height: 820px;
   -o-object-fit: cover;
      object-fit: cover;
 }

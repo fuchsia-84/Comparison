@@ -9,5 +9,5 @@ body {
     font-family: var(--font-base);
     background: linear-gradient(180deg, var(--color-bg-t) 40%, var(--color-bg-b) 100%);
     color: var(--color-main);
-    /* To Do: add min-width/height */
+    min-width: 280px;
 }
