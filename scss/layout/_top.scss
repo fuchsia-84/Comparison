@@ -103,6 +103,9 @@
                     color: var(--color-hero);
                     border-color: var(--color-hero);
                 }
+                .c-button:hover {
+                    background-color: var(--color-slide-dot);
+                }
             }
             .c-scroll {
                 margin-right: 2.0rem;

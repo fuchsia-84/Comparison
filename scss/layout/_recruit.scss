@@ -21,6 +21,10 @@
                 color: var(--color-bottom);
                 border-color: var(--color-bottom);
             }
+            .c-button:hover {
+                color: var(--color-button-bg-r);
+                background-color: var(--color-bottom);
+            }
         }
         img {
             display: block;
@@ -61,9 +65,13 @@
                 }
                 .c-button {
                     display: inline-block;
-                    border: none;
+                    border: 1px solid var(--color-bottom);
                     background: var(--color-bottom);
                     color: var(--color-for-recruit-bottom);
+                }
+                .c-button:hover {
+                    color: var(--color-bottom);
+                    background: transparent;
                 }
             }
             img {

@@ -44,6 +44,9 @@
                     color: var(--color-service-bg);
                     background: linear-gradient(90deg, var(--color-button-bg-l), var(--color-button-bg-r));
                 }
+                .c-button:hover {
+                    background: var(--color-button-bg-l);
+                }
             }
             .service-sub {
                 list-style: none;

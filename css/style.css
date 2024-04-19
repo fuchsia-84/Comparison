@@ -412,7 +412,7 @@ body {
   padding: 1.19rem;
   padding-right: 9.93rem;
   color: var(--color-main);
-  border: 1px solid var(--color-main);
+  border: 1px solid var(--color-button-bg-l);
   position: relative;
 }
 
@@ -1007,6 +1007,9 @@ header.open .c-container .navigations .c-nav {
   color: var(--color-hero);
   border-color: var(--color-hero);
 }
+.top .c-container .top-contents .hero-message .c-button:hover {
+  background-color: var(--color-slide-dot);
+}
 .top .c-container .top-contents .c-scroll {
   margin-right: 2rem;
 }
@@ -1110,34 +1113,50 @@ header.open .c-container .navigations .c-nav {
 }
 .news .c-container .news-button {
   cursor: pointer;
-  font-size: 1rem;
-  line-height: 1.125rem;
-  padding: 10px 20px 10px 40px;
-  font-weight: 700;
-  text-decoration: none;
   color: var(--color-news-header);
-  background-color: var(--color-news-header-bg);
-  -webkit-clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
-          clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+  background-color: transparent;
   position: absolute;
   bottom: 0;
   right: -1.25rem;
 }
-.news .c-container .news-button::after {
-  content: "\f105";
+.news .c-container .news-button span {
+  position: absolute;
+  font-size: 1rem;
+  line-height: 1.125rem;
+  padding: 0.5rem 1.125rem 0.5rem 2.375rem;
+  -webkit-clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+          clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+  z-index: 12;
+  background-color: transparent;
+  bottom: 0;
+  right: 0;
+}
+.news .c-container .news-button span i {
   font-size: 1rem;
   line-height: 1rem;
   letter-spacing: 0.05em;
   font-weight: 900;
-  font-family: var(--font-awesome);
   margin-left: 3.25rem;
 }
-.news .c-container .news-button:hover {
+.news .c-container .news-button:hover span {
   color: var(--color-news-header-bg);
   background-color: var(--color-news-header);
 }
-.news .c-container .news-button:hover::before {
-  border: 1px solid var(--color-news-header-bg);
+.news .c-container .news-button::before {
+  display: block;
+  content: "";
+  width: 12.875rem;
+  height: 2.25rem;
+  background-color: var(--color-news-header-bg);
+  -webkit-clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+          clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+  position: absolute;
+  z-index: 10;
+  right: -1px; /* 0.0625rem = 1px is border size */
+  bottom: -1px;
 }
 
 @media screen and (max-width: 1025px) {
@@ -1150,6 +1169,31 @@ header.open .c-container .navigations .c-nav {
     border: 0;
     flex-wrap: wrap;
     background-color: transparent;
+    /*
+    .news-button {
+        clip-path: none;
+        background-color: transparent;
+        color: var(--color-news-header-bg);
+        border: 1px solid var(--color-news-header-bg);
+        position: relative;
+        bottom: 0;
+        right: 0;
+        font-size: 0.75rem;
+        line-height: 1.0em;
+        width: 9.375rem;
+        padding: 0.75rem;
+        padding-right: 4.375rem;
+        white-space: nowrap;
+        margin-left: 15px;
+        margin-bottom: 20px;
+    }
+    */
+    /*
+    .news-button:hover {
+        color: var(--color-news-header);
+        background-color: var(--color-news-header-bg);
+    }
+    */
   }
   .news .c-container .c-news-contents {
     background-color: var(--color-news-header);
@@ -1183,30 +1227,41 @@ header.open .c-container .navigations .c-nav {
     margin-left: 0.2rem;
   }
   .news .c-container .news-button {
-    -webkit-clip-path: none;
-            clip-path: none;
-    background-color: transparent;
-    color: var(--color-news-header-bg);
-    border: 1px solid var(--color-news-header-bg);
-    position: relative;
-    bottom: 0;
-    right: 0;
-    font-size: 0.75rem;
-    line-height: 1em;
-    width: 9.375rem;
-    padding: 0.75rem;
-    padding-right: 4.375rem;
-    white-space: nowrap;
+    position: static;
     margin-left: 15px;
     margin-bottom: 20px;
+    border: 1px solid var(--color-news-header-bg);
+    text-decoration: none;
   }
-  .news .c-container .news-button::after {
-    margin: 0;
-    position: absolute;
-    top: 0.75rem;
-    right: 0.75rem;
+  .news .c-container .news-button span {
+    position: static;
+    display: block;
+    width: 9.375rem;
+    padding: 0.75rem;
     font-size: 0.75rem;
     line-height: 1em;
+    -webkit-clip-path: none;
+            clip-path: none;
+    color: var(--color-news-header-bg);
+    background-color: var(--color-news-header);
+    text-decoration: none;
+  }
+  .news .c-container .news-button span i { /*
+ bottom: 0.75rem;
+ right: 0.75rem;
+ */
+    font-size: 0.75rem;
+    line-height: 1em;
+  }
+  .news .c-container .news-button:hover span {
+    color: var(--color-news-header);
+    background-color: var(--color-news-header-bg);
+    text-decoration: none;
+  }
+  .news .c-container .news-button::before {
+    display: none;
+    -webkit-clip-path: none;
+            clip-path: none;
   }
 }
 .about {
@@ -1233,6 +1288,9 @@ header.open .c-container .navigations .c-nav {
   display: block;
   color: var(--color-button);
   background: linear-gradient(90deg, var(--color-button-bg-l), var(--color-button-bg-r));
+}
+.about .c-container .c-button:hover {
+  background: var(--color-button-bg-l);
 }
 
 .about::before {
@@ -1339,6 +1397,9 @@ header.open .c-container .navigations .c-nav {
   color: var(--color-service-bg);
   background: linear-gradient(90deg, var(--color-button-bg-l), var(--color-button-bg-r));
 }
+.service .c-container .service-contents .service-main .c-button:hover {
+  background: var(--color-button-bg-l);
+}
 .service .c-container .service-contents .service-sub {
   list-style: none;
   width: 42%;
@@ -1439,6 +1500,10 @@ header.open .c-container .navigations .c-nav {
   color: var(--color-bottom);
   border-color: var(--color-bottom);
 }
+.contact .c-container .contact-contents .c-button:hover {
+  color: var(--color-button-bg-l);
+  background-color: var(--color-bottom);
+}
 .contact .c-container img {
   display: block;
   width: 50%;
@@ -1478,9 +1543,13 @@ header.open .c-container .navigations .c-nav {
   }
   .contact .c-container .contact-contents .c-button {
     display: inline-block;
-    border: none;
+    border: 1px solid var(--color-bottom);
     background: var(--color-bottom);
     color: var(--color-for-contact);
+  }
+  .contact .c-container .contact-contents .c-button:hover {
+    color: var(--color-bottom);
+    background: transparent;
   }
   .contact .c-container img {
     display: none;
@@ -1509,6 +1578,10 @@ header.open .c-container .navigations .c-nav {
   display: block;
   color: var(--color-bottom);
   border-color: var(--color-bottom);
+}
+.recruit .c-container .recruit-contents .c-button:hover {
+  color: var(--color-button-bg-r);
+  background-color: var(--color-bottom);
 }
 .recruit .c-container img {
   display: block;
@@ -1551,9 +1624,13 @@ header.open .c-container .navigations .c-nav {
   }
   .recruit .c-container .recruit-contents .c-button {
     display: inline-block;
-    border: none;
+    border: 1px solid var(--color-bottom);
     background: var(--color-bottom);
     color: var(--color-for-recruit-bottom);
+  }
+  .recruit .c-container .recruit-contents .c-button:hover {
+    color: var(--color-bottom);
+    background: transparent;
   }
   .recruit .c-container img {
     display: none;

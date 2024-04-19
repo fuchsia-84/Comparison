@@ -16,6 +16,10 @@
                 color: var(--color-bottom);
                 border-color: var(--color-bottom);
             }
+            .c-button:hover {
+                color: var(--color-button-bg-l);
+                background-color: var(--color-bottom);
+            }
         }
         img {
             display: block;
@@ -54,9 +58,13 @@
                 }
                 .c-button {
                     display: inline-block;
-                    border: none;
+                    border: 1px solid var(--color-bottom);
                     background: var(--color-bottom);
                     color: var(--color-for-contact);
+                }
+                .c-button:hover {
+                    color: var(--color-bottom);
+                    background: transparent;
                 }
             }
             img {

@@ -26,6 +26,9 @@
             color: var(--color-button);
             background: linear-gradient(90deg, var(--color-button-bg-l), var(--color-button-bg-r));
         }
+        .c-button:hover {
+            background: var(--color-button-bg-l);
+        }
     }
 }
 .about::before {
