@@ -47,3 +47,18 @@
         }
     }
 }
+
+@include m.mq(sp) {
+    .c-section-title {
+        h1 {
+            font-size: 1.5rem;
+        }
+        h1::after {
+            height: 0.75rem;
+            margin-left: 0.4rem;
+        }
+        p {
+            font-size: 0.625rem;
+        }
+    }
+}

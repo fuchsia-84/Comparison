@@ -547,6 +547,18 @@ body {
     font-size: 0.75rem;
   }
 }
+@media screen and (max-width: 300px) {
+  .c-section-title h1 {
+    font-size: 1.5rem;
+  }
+  .c-section-title h1::after {
+    height: 0.75rem;
+    margin-left: 0.4rem;
+  }
+  .c-section-title p {
+    font-size: 0.625rem;
+  }
+}
 .c-blue-slash {
   position: relative;
 }
@@ -1139,7 +1151,7 @@ header.open .c-container .navigations .c-nav {
   color: var(--color-about-sub);
   margin-bottom: 3rem;
 }
-.about .c-container p {
+.about .c-container .about-detail {
   font-size: 1.125rem;
   line-height: 2em;
   letter-spacing: 0.05em;
@@ -1190,7 +1202,7 @@ header.open .c-container .navigations .c-nav {
     letter-spacing: 0.05em;
     margin-bottom: 5.625rem;
   }
-  .about .c-container p {
+  .about .c-container .about-detail {
     font-size: 1rem;
     line-height: 1.5rem;
     text-align: center;
