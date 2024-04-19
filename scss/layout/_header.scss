@@ -66,6 +66,14 @@ header {
                         color: var(--color-header);
                     }
                 }
+                .for-contact:hover {
+                    color: var(--color-for-contact);
+                    background-color: var(--color-header);
+                }
+                .for-recruit:hover {
+                    color: var(--color-for-recruit);
+                    background-color: var(--color-header);
+                }
             }
 
         }

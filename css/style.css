@@ -773,6 +773,14 @@ header .c-container .navigations .nav-buttons li a {
   text-decoration: none;
   color: var(--color-header);
 }
+header .c-container .navigations .nav-buttons .for-contact:hover {
+  color: var(--color-for-contact);
+  background-color: var(--color-header);
+}
+header .c-container .navigations .nav-buttons .for-recruit:hover {
+  color: var(--color-for-recruit);
+  background-color: var(--color-header);
+}
 
 header.fixed {
   background-color: var(--color-header-fixed-bg);
@@ -1123,6 +1131,13 @@ header.open .c-container .navigations .c-nav {
   font-weight: 900;
   font-family: var(--font-awesome);
   margin-left: 3.25rem;
+}
+.news .c-container .news-button:hover {
+  color: var(--color-news-header-bg);
+  background-color: var(--color-news-header);
+}
+.news .c-container .news-button:hover::before {
+  border: 1px solid var(--color-news-header-bg);
 }
 
 @media screen and (max-width: 1025px) {
@@ -1711,15 +1726,34 @@ footer .page-top-button.fixed {
 footer .page-top-button::before {
   content: "";
   display: block;
+  width: 96px;
+  height: 96px;
+  background-color: var(--color-page-top);
+  -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(100% 0, 100% 100%, 0 100%);
+  position: absolute;
+  z-index: -1;
+  right: 1px;
+  bottom: 1px;
+}
+footer .page-top-button::after {
+  content: "";
+  display: block;
   width: 100px;
   height: 100px;
   background-color: var(--color-page-top);
   -webkit-clip-path: polygon(100% 0, 100% 100%, 0 100%);
           clip-path: polygon(100% 0, 100% 100%, 0 100%);
   position: absolute;
-  z-index: -1;
+  z-index: -2;
   right: 0;
   bottom: 0;
+}
+footer .page-top-button:hover a {
+  color: var(--color-page-top);
+}
+footer .page-top-button:hover::before {
+  background-color: var(--color-footer);
 }
 
 @media screen and (max-width: 1025px) {
@@ -1797,6 +1831,10 @@ footer .page-top-button::before {
     padding: 1.625rem 0.375rem 0.375rem 1.875rem;
   }
   footer .page-top-button::before {
+    width: 46px;
+    height: 46px;
+  }
+  footer .page-top-button::after {
     width: 50px;
     height: 50px;
   }

@@ -61,6 +61,13 @@
             font-family: var(--font-awesome);
             margin-left: 3.25rem;
         }
+        .news-button:hover {
+            color: var(--color-news-header-bg);
+            background-color: var(--color-news-header);
+        }
+        .news-button:hover::before {
+            border: 1px solid var(--color-news-header-bg);
+        }
     }
 }
 @include m.mq(pc) {
