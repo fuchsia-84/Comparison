@@ -248,6 +248,9 @@ progress {
   --color-news-button-to-article-bg: #18478D;
   --color-circle-button: #fff;
   --color-circle-button-bg: linear-gradient(-45deg, #1C3B7D 0%, #2E63D4 40%, #FFBB77 100%);
+  --color-article-point: #18478D;
+  --color-article-links: #1C3B7D;
+  --color-article-links-hover: #A1ADC9;
 }
 
 :root {
@@ -769,13 +772,18 @@ body {
   margin: 0 auto;
   list-style: none;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 .c-breadcrumb ul li {
   font-size: 0.625rem;
   line-height: 1rem;
   letter-spacing: 0;
   font-weight: 400;
+  white-space: nowrap;
+}
+.c-breadcrumb ul li:last-of-type {
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .c-breadcrumb ul li a {
   color: var(--color-breadcrumb);
@@ -828,6 +836,7 @@ body {
   -webkit-clip-path: polygon(58.7% 0, 100% 0, 100% 100%, 43.4% 100%);
           clip-path: polygon(58.7% 0, 100% 0, 100% 100%, 43.4% 100%);
   background: var(--color-for-recruit);
+  /* To Do: fix background */
   position: absolute;
   right: 0;
   top: 0;
@@ -2208,6 +2217,292 @@ footer .page-top-button:hover::before {
   }
   .show-news .c-container .c-news-contents .item a:hover::after {
     display: none;
+  }
+}
+.article {
+  padding: 100px 0 120px;
+}
+.article .c-container img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.article .c-container .article-title {
+  margin-bottom: 30px;
+}
+.article .c-container .article-title h1 {
+  font-size: 2rem;
+  line-height: 1.5em;
+  font-weight: 400;
+  margin-bottom: 0.625rem;
+  position: relative;
+  padding-top: 25px;
+  padding-left: 30px;
+}
+.article .c-container .article-title h1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 0 100%);
+  background-color: var(--color-article-point);
+}
+.article .c-container .article-title .date {
+  display: inline-block;
+  font-size: 0.75rem;
+  line-height: 1.25rem;
+  letter-spacing: 0.15em;
+  margin-right: 0.625rem;
+}
+.article .c-container .article-title .category {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: var(--color-category-bg);
+  border-radius: 20px;
+  font-size: 0.625rem;
+  line-height: 1em;
+  letter-spacing: 0.2em;
+}
+.article .c-container .article-contents {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 36px;
+  padding: 75px 0 80px;
+}
+.article .c-container .article-contents div:first-of-type h1 {
+  font-size: 1.5rem;
+  line-height: 1.5em;
+  font-weight: 700;
+  padding-top: 8px;
+  padding-left: 29px;
+  position: relative;
+}
+.article .c-container .article-contents div:first-of-type h1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 50px;
+  background-color: var(--color-article-point);
+}
+.article .c-container .article-contents div:first-of-type p {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+}
+.article .c-container .article-contents div:nth-of-type(2) h2 {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+}
+.article .c-container .article-contents div:nth-of-type(2) p {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  margin-top: 1.5rem;
+  margin-left: 0.3125rem;
+}
+.article .c-container .article-contents div:nth-of-type(2) .c-button {
+  display: block;
+  white-space: nowrap;
+  margin-top: 2.25rem;
+  color: var(--color-service-bg);
+  background: linear-gradient(90deg, var(--color-button-bg-l), var(--color-button-bg-r));
+}
+.article .c-container .article-contents div:nth-of-type(2) .c-button:hover {
+  background: var(--color-button-bg-l);
+}
+.article .c-container .sns-buttons {
+  display: flex;
+  flex-wrap: nowrap;
+  list-style: none;
+}
+.article .c-container .sns-buttons li {
+  height: 30px;
+  margin-right: 5px;
+}
+.article .c-container .sns-buttons :last-child {
+  margin-right: 0;
+}
+.article .c-container .article-links {
+  position: relative;
+  margin-top: 36px;
+}
+.article .c-container .article-links a {
+  text-decoration: none;
+  color: var(--color-article-links);
+  cursor: pointer;
+  text-align: center;
+  font-size: 0.75rem;
+  line-height: 1.5em;
+}
+.article .c-container .article-links .prev-next {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.article .c-container .article-links .prev-next li a {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  -moz-column-gap: 6px;
+       column-gap: 6px;
+  width: 100%;
+  max-width: 13.5rem;
+  letter-spacing: 0.05em;
+  padding: 7.5px 0;
+}
+.article .c-container .article-links .prev-next li a:hover {
+  background-color: var(--color-article-links-hover);
+}
+.article .c-container .article-links .prev-next li:first-of-type a {
+  text-align: left;
+}
+.article .c-container .article-links .prev-next li:last-of-type a {
+  text-align: right;
+}
+.article .c-container .article-links .prev-next li:first-of-type a::before {
+  content: "\f100";
+  font-family: var(--font-awesome);
+  font-weight: 900;
+}
+.article .c-container .article-links .prev-next li:last-of-type a::after {
+  content: "\f101";
+  font-family: var(--font-awesome);
+  font-weight: 900;
+}
+.article .c-container .article-links .latest-all {
+  position: absolute;
+  width: 15rem;
+  height: auto;
+  top: 0;
+  left: calc(50% - 7.5rem);
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.article .c-container .article-links .latest-all li {
+  padding: 1rem 1.5rem;
+}
+.article .c-container .article-links .latest-all li a {
+  width: 100%;
+  letter-spacing: 0.05em;
+  padding: 1rem 0;
+}
+.article .c-container .article-links .latest-all li a:hover {
+  border-bottom: 1px solid var(--color-article-links);
+}
+.article .c-container .article-links .latest-all li:first-of-type {
+  border-right: 1px solid var(--color-article-links-hover);
+}
+.article .c-container .article-links .latest-all li:first-of-type a {
+  text-align: left;
+}
+.article .c-container .article-links .latest-all li:last-of-type a {
+  text-align: right;
+}
+
+@media screen and (max-width: 1025px) {
+  .article {
+    padding: 40px 0 80px;
+  }
+  .article .c-container .article-title {
+    margin-bottom: 24px;
+  }
+  .article .c-container .article-title h1 {
+    font-size: 1.25rem;
+    padding-top: 10px;
+    padding-left: 15px;
+  }
+  .article .c-container .article-title h1::before {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  .article .c-container .article-title .date {
+    font-size: 0.625rem;
+    line-height: 1.5em;
+    margin-right: 5px;
+  }
+  .article .c-container .article-contents {
+    padding: 36px 0 3rem;
+    row-gap: 30px;
+  }
+  .article .c-container .article-contents div:first-of-type h1 {
+    font-size: 0.875rem;
+    line-height: 1.5em;
+    padding-top: 9px;
+    padding-left: 13px;
+  }
+  .article .c-container .article-contents div:first-of-type h1::before {
+    width: 3px;
+    height: 36px;
+  }
+  .article .c-container .article-contents div:first-of-type p {
+    font-size: 0.875rem;
+    line-height: 1.5em;
+    margin-top: 0.75rem;
+  }
+  .article .c-container .article-contents div:nth-of-type(2) h2 {
+    font-size: 0.875rem;
+  }
+  .article .c-container .article-contents div:nth-of-type(2) p {
+    font-size: 0.875rem;
+    line-height: 1.5em;
+    margin-top: 0.75rem;
+    margin-left: 0;
+  }
+  .article .c-container .article-contents div:nth-of-type(2) .c-button {
+    margin-top: 25px;
+  }
+}
+@media screen and (max-width: 756px) {
+  .article .c-container .sns-buttons {
+    flex-wrap: wrap;
+  }
+  .article .c-container .sns-buttons .spacer {
+    width: 100%;
+  }
+  .article .c-container .article-links {
+    position: static;
+    margin-top: 3.375rem;
+  }
+  .article .c-container .article-links .prev-next li a {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    -moz-column-gap: 9px;
+         column-gap: 9px;
+    width: 100%;
+    max-width: 7.5rem;
+    padding: 5px 0;
+    font-size: 0.625rem;
+    line-height: 1.5em;
+  }
+  .article .c-container .article-links .prev-next li:first-of-type a::before {
+    content: "\f100";
+    font-family: var(--font-awesome);
+    font-weight: 900;
+    font-size: 0.75rem;
+    line-height: 1.5em;
+  }
+  .article .c-container .article-links .prev-next li:last-of-type a::after {
+    content: "\f101";
+    font-family: var(--font-awesome);
+    font-weight: 900;
+    font-size: 0.75rem;
+    line-height: 1.5em;
+  }
+  .article .c-container .article-links .latest-all {
+    position: static;
+    margin: 9px auto 0;
   }
 }
 

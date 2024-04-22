@@ -10,12 +10,17 @@
         margin: 0 auto;
         list-style: none;
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         li {
             font-size: 0.625rem;
             line-height: 1.0rem;
             letter-spacing: 0;
             font-weight: 400;
+            white-space: nowrap;
+        }
+        li:last-of-type {
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
         li a {
             color: var(--color-breadcrumb);
