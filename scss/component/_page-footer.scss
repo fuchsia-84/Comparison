@@ -1,0 +1,69 @@
+@use "../global/" as g;
+@use "../foundation/mixin" as m;
+
+.c-page-footer {
+    display: flex;
+    position: relative;
+    z-index: 1;
+
+    .contact {
+        width: 100%;
+        padding: 105px 0;
+        clip-path: polygon(0 0, 56.5% 0, 41.3% 100%, 0 100%);
+        .c-container {
+            img {
+                display: none;
+            }
+        }
+    }
+    .recruit {
+        margin-top: 0;
+        width: 100%;
+        padding: 105px 0;
+        height: 100%;
+        clip-path: polygon(58.7% 0, 100% 0, 100% 100%, 43.4% 100%);
+        background: var(--color-for-recruit);
+        //background: linear-gradient(12deg, var(--color-for-recruit, var(--color-for-recruit-bottom)));
+        /* To Do: fix background */
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 2;
+        .c-container {
+            .recruit-contents {
+                .c-button:hover {
+                    color: var(--color-for-recruit);
+                }
+            }
+            img {
+                display: none;
+            }
+        }
+    }
+    .contact::after {
+        display: none;
+    }
+    .recruit::after {
+        display: none;
+    }
+}
+@include m.mq(pc) {
+    .c-page-footer {
+        display: block;
+        position: static;
+        .contact {
+            clip-path: none;
+        }
+        .recruit {
+            position: static;
+            clip-path: none;
+            .c-container {
+                .recruit-contents {
+                    .c-button:hover {
+                        color: var(--color-bottom);
+                    }
+                }
+            }
+        }
+    }
+}

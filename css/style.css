@@ -806,6 +806,64 @@ body {
     line-height: 0.78rem;
   }
 }
+.c-page-footer {
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
+.c-page-footer .contact {
+  width: 100%;
+  padding: 105px 0;
+  -webkit-clip-path: polygon(0 0, 56.5% 0, 41.3% 100%, 0 100%);
+          clip-path: polygon(0 0, 56.5% 0, 41.3% 100%, 0 100%);
+}
+.c-page-footer .contact .c-container img {
+  display: none;
+}
+.c-page-footer .recruit {
+  margin-top: 0;
+  width: 100%;
+  padding: 105px 0;
+  height: 100%;
+  -webkit-clip-path: polygon(58.7% 0, 100% 0, 100% 100%, 43.4% 100%);
+          clip-path: polygon(58.7% 0, 100% 0, 100% 100%, 43.4% 100%);
+  background: var(--color-for-recruit);
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+.c-page-footer .recruit .c-container .recruit-contents .c-button:hover {
+  color: var(--color-for-recruit);
+}
+.c-page-footer .recruit .c-container img {
+  display: none;
+}
+.c-page-footer .contact::after {
+  display: none;
+}
+.c-page-footer .recruit::after {
+  display: none;
+}
+
+@media screen and (max-width: 1025px) {
+  .c-page-footer {
+    display: block;
+    position: static;
+  }
+  .c-page-footer .contact {
+    -webkit-clip-path: none;
+            clip-path: none;
+  }
+  .c-page-footer .recruit {
+    position: static;
+    -webkit-clip-path: none;
+            clip-path: none;
+  }
+  .c-page-footer .recruit .c-container .recruit-contents .c-button:hover {
+    color: var(--color-bottom);
+  }
+}
 .c-circle-button {
   display: block;
   width: 40px;
@@ -1998,9 +2056,6 @@ footer .page-top-button:hover::before {
     height: 50px;
   }
 }
-.show-news {
-  background-color: #fff;
-}
 .show-news .c-container {
   padding: 100px 0 240px;
   display: flex;
@@ -2144,6 +2199,9 @@ footer .page-top-button:hover::before {
     min-height: 100%;
     max-height: 100%;
     font-weight: 400;
+  }
+  .show-news .c-container .c-news-contents .item a:hover {
+    /* To Do: fix hover action: margin or contents size changing */
   }
   .show-news .c-container .c-news-contents .item a:hover .title {
     text-decoration: underline;

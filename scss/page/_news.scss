@@ -2,7 +2,6 @@
 @use "../foundation/mixin" as m;
 
 .show-news {
-    background-color: #fff;
     .c-container {
         padding: 100px 0 240px;
         display: flex;
@@ -125,6 +124,7 @@
         }
     }
 }
+
 @include m.mq(pc) {
     .show-news {
         .c-container {
