@@ -762,6 +762,25 @@ body {
     background-image: url(../../img/page_header_sp.png);
   }
 }
+@media screen and (max-width: 756px) {
+  .c-page-header {
+    padding: 96px 0 30px;
+  }
+  .c-page-header .c-container {
+    width: 80%;
+  }
+  .c-page-header .c-container h1 {
+    font-size: 1.5rem;
+    margin-right: 0.6rem;
+  }
+  .c-page-header .c-container span {
+    height: 1rem;
+    margin-right: 0.6rem;
+  }
+  .c-page-header .c-container p {
+    font-size: 0.825rem;
+  }
+}
 .c-breadcrumb {
   width: 100%;
   background-color: var(--color-bg-breadcrumb);

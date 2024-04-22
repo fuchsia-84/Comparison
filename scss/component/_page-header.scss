@@ -44,3 +44,22 @@
         background-image: url(../../img/page_header_sp.png);
     }
 }
+@include m.mq(tab) {
+    .c-page-header {
+        padding: 96px 0 30px;
+        .c-container {
+            width: 80%;
+            h1 {
+                font-size: 1.5rem;
+                margin-right: 0.6rem;
+            }
+            span {
+                height: 1.0rem;
+                margin-right: 0.6rem;
+            }
+            p {
+                font-size: 0.825rem;
+            }
+        }
+    }
+}
