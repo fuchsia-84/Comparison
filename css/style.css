@@ -244,6 +244,7 @@ progress {
   --color-breadcrumb: #A1ADC9;
   --color-breadcrumb-bar: #698DD9;
   --color-breadcrumb-current: #1751CD;
+  --color-page-footer-recruit_r: #FF9A35;
   --color-news-button-to-article: #fff;
   --color-news-button-to-article-bg: #18478D;
   --color-circle-button: #fff;
@@ -854,8 +855,7 @@ body {
   height: 100%;
   -webkit-clip-path: polygon(58.7% 0, 100% 0, 100% 100%, 43.4% 100%);
           clip-path: polygon(58.7% 0, 100% 0, 100% 100%, 43.4% 100%);
-  background: var(--color-for-recruit);
-  /* To Do: fix background */
+  background: linear-gradient(12deg, var(--color-page-footer-recruit_r), var(--color-for-recruit-bottom));
   position: absolute;
   right: 0;
   top: 0;
@@ -887,6 +887,7 @@ body {
     position: static;
     -webkit-clip-path: none;
             clip-path: none;
+    background: linear-gradient(45deg, var(--color-for-recruit), var(--color-for-recruit-bottom));
   }
   .c-page-footer .recruit .c-container .recruit-contents .c-button:hover {
     color: var(--color-bottom);
