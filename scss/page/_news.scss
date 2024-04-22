@@ -27,7 +27,6 @@
                     min-height: 420px;
                     position: relative;
                     img {
-                        //display: block;
                         width: 100%;
                         height: auto;
                         object-fit: cover;
@@ -43,7 +42,6 @@
                         white-space: wrap;
                     }
                     .detail {
-                        //display: block;
                         width: 81%;
                         font-size: 0.625rem;
                         line-height: 0.75rem;
@@ -61,7 +59,6 @@
                         content: '…';
                     }
                     .news-button-to-article {
-                        //display: block;
                         width: 100px;
                         height: 100px;
                         position: absolute;
@@ -152,6 +149,7 @@
                         .title {
                             text-decoration: underline;
                         }
+                        /* To Do: fix hover action: margin or contents size changing */
                     }
                     a:hover::after {
                         display: none;
