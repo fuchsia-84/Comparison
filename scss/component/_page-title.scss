@@ -1,0 +1,55 @@
+@use "../global/" as g;
+@use "../foundation/mixin" as m;
+
+.c-page-title {
+    color: var(--color-page-title);
+    text-align: center;
+    margin-bottom: 3.5rem;
+    h1 {
+        font-size: 4.0rem;
+        line-height: 1.5em;
+        font-weight: 900;
+    }
+    h1::after {
+        display: block;
+        content: '';
+        width: 22px;
+        height: 3px;
+        background-color: var(--color-page-title);
+        margin: 0 auto 10px;
+    }
+    p {
+        font-size: 1.0rem;
+        line-height: 1.125rem;
+        letter-spacing: 0.2em;
+        font-weight: 700;
+    }
+}
+@include m.mq(pc) {
+    .c-page-title {
+        margin-bottom: 1.5rem;
+        h1 {
+            font-size: 3.0rem;
+        }
+        h1::after {
+            width: 1.0rem;
+            height: 2px;
+            margin: 0 auto 8px;
+        }
+    }
+}
+
+@include m.mq(tab) {
+    .c-page-title {
+        margin-bottom: 1.5rem;
+        h1 {
+            font-size: 1.5rem;
+            line-height: 2.25rem;
+        }
+        h1::after {
+            width: 0.5rem;
+            height: 2px;
+            margin: 0 auto 5px;
+        }
+    }
+}

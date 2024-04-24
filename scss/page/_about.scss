@@ -1,0 +1,383 @@
+@use "../global/" as g;
+@use "../foundation/mixin" as m;
+
+.show-about {
+    padding: 100px 0 120px;
+    position: relative;
+    .c-container {
+        .vision {
+            padding-bottom: 150px;
+            text-align: center;
+            .sub-title {
+                font-size: 2.25rem;
+                line-height: 1.0em;
+                letter-spacing: 0.15em;
+            }
+            .text {
+                font-size: 1.125rem;
+                line-height: 1.5rem;
+                margin-top: 2.25rem;
+            }
+        }
+        .vision::after {
+            content: '';
+            display: block;
+            position: absolute;
+            z-index: -1;
+            top: 120px;
+            right: 50px;
+            width: 50%;
+            height: 100%;
+            max-width: 52rem;
+            background-image: url(../../img/message_bg_2.svg);
+            background-size: contain;
+        }
+        .message {
+            margin-top: 30px;
+            margin-bottom: 140px;
+            .c-container {
+                width: 100%;
+                max-width: 100%;
+                .c-page-title {
+                    margin-bottom: 4.5rem;
+                }
+                .ceo {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    column-gap: 20px;
+                    .ceo-top {
+                        position: relative;
+                        z-index: 1;
+                        .ceo-image {
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                            background-image: url(../../img/ceo.jpg);
+                            background-size: cover;
+                            background-position: center;
+                        }
+                        .name {
+                            display: block;
+                            width: 100%;
+                            padding: 10px 54px 12px 40px;
+                            min-width: 525px;
+                            height: 60px;
+                            background: var(--color-name-bg);
+                            clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+                            position: absolute;
+                            bottom: -30px;
+                            right: -35px;
+                            z-index: 2;
+                            h1 {
+                                display: block;
+                                position: absolute;
+                                top: 24px;
+                                right: 54px;
+                                z-index: 4;
+                                color: var(--color-name);
+                                font-size: 1.125rem;
+                                line-height: 1.5rem;
+                                text-align: right;
+                                white-space: nowrap;
+                            }
+                            span {
+                                display: block;
+                                position: absolute;
+                                top: 10px;
+                                left: 40px;
+                                z-index: 3;
+                                font-size: 2.0rem;
+                                line-height: 1.0em;
+                                letter-spacing: -0.1em;
+                                font-weight: 900;
+                                font-style: italic;
+                                background: var(--color-name-alpha);
+                                opacity: 0.2;
+                                background-clip: text;
+                                -webkit-text-fill-color: transparent;
+                                text-align: left;
+                                white-space: nowrap;
+                            }
+                        }
+                    }
+                    p {
+                        display: block;
+                        height: auto;
+                        font-size: 1.125rem;
+                        line-height: 1.5rem;
+                        padding: 60px 0 80px;
+                        span {
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+        .message::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 40%;
+            height: 5px;
+            background-color: var(--color-message-border);
+            z-index: -2;
+            top: 870px;
+            right: 0;
+        }
+        .message::after {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 40%;
+            height: 5px;
+            background-color: var(--color-message-border);
+            z-index: -2;
+            top: 1440px;
+            left: 0;
+        }
+        .company-info {
+            margin-top: 30px;
+            .c-container {
+                width: 100%;
+                max-width: 100%;
+                .c-page-title {
+                    margin-bottom: 4.5rem;
+                }
+                .company {
+                    .company-top {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        column-gap: 20px;
+                        position: relative;
+                        .company-image {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                        .info {
+                            display: grid;
+                            grid-template-columns: 1fr 2fr;
+                            margin: 55px 0 75px;
+                            align-items: center;
+                            border: 1px solid #1C3B7D;
+                            dt {
+                                display: flex;
+                                flex-wrap: nowrap;
+                                width: 100%;
+                                height: 100%;
+                                min-height: 42px;
+                                font-size: 1.0rem;
+                                line-height: 1.125rem;
+                                font-weight: 700;
+                                color: var(--color-company-tab);
+                                background: var(--color-company-tab-bg);
+                                align-items: center;
+                                justify-content: center;
+                                border-bottom: 1px solid #fff;
+                            }
+                            dt:last-of-type {
+                                border-bottom: none;
+                            }
+                            dd {
+                                display: flex;
+                                flex-wrap: nowrap;
+                                width: 100%;
+                                height: 100%;
+                                min-height: 42px;
+                                font-size: 1.0rem;
+                                line-height: 1.125rem;
+                                align-items: center;
+                                justify-content: center;
+                                border-bottom: 1px solid #1C3B7D;
+                                background-color: rgba(255,255,255,0.8);
+                            }
+                            dd:last-of-type {
+                                border-bottom: none;
+                            }
+                        }
+                        .c-access {
+                            position: absolute;
+                            bottom: 1.125rem;
+                            right: 1.125rem;
+                        }
+                    }
+                    .map {
+                        margin-top: 30px;
+                        iframe {
+                            width: 100%;
+                            aspect-ratio: 16/9;
+                        }
+                        .map-link {
+                            text-decoration: none;
+                            color: var(--color-map-link);
+                            font-size: 1.125rem;
+                            line-height: 1.5rem;
+                            margin-top: 0.625rem;
+                            margin-left: 1.25rem;
+                        }
+                        .map-link:hover {
+                            color: var(--color-map-link-hover);
+                        }
+                        .c-access {
+                            margin-top: 0.625rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include m.mq(pc) {
+    .show-about {
+        .c-container {
+            .vision {
+                padding-bottom: 60px;
+            }
+            .message {
+                margin-top: 0;
+                margin-bottom: 60px;
+                .c-container {
+                    .ceo {
+                        .ceo-top {
+                            .name {
+                                padding: 5px 45px 8px 30px;
+                                min-width: 100%;
+                                height: 48px;
+                                h1 {
+                                    font-size: 1.0rem;
+                                    top: 20px;
+                                    right: 45px;
+                                }
+                                span {
+                                    font-size: 1.75rem;
+                                    top: 5px;
+                                    left: 30px;
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .message::before {
+                display: none;
+            }
+            .message::after {
+                display: none;
+            }
+        }
+    }
+}
+@include m.mq(tab) {
+    .show-about {
+        .c-container {
+            .vision {
+                .sub-title {
+                    font-size: 1.125rem;
+                    line-height: 1.5rem;
+                }
+                .text {
+                    font-size: 1.0rem;
+                    line-height: 1.5rem;
+                    margin-top: 1.125rem;
+                }
+            }
+            .vision::after {
+                width: 81.6%;
+                top: 103px;
+                right: 0;
+            }
+            .message {
+                margin-bottom: 0;
+                .c-container {
+                    .c-page-title {
+                        margin-bottom: 1.5rem;
+                    }
+                    .ceo {
+                        grid-template-columns: 1fr;
+                        .ceo-top {
+                            width: 100%;
+                            height: 100%;
+                            .ceo-image {
+                                width: 100%;
+                                height: 450px;
+                                background-image: url(../../img/ceo_sp.jpg);
+                                background-size: cover;
+                            }
+                            .name {
+                                width: 80%;
+                                min-width: 240px;
+                                height: 48px;
+                                bottom: 0;
+                                left: 0;
+                                padding: 2px 24px 2px 24px;
+                                h1 {
+                                    font-size: 0.75rem;
+                                    line-height: 2.0em;
+                                    bottom: 2px;
+                                    right: 24px;
+                                }
+                                span {
+                                    font-size: 1.125rem;
+                                    line-height: 1.5rem;
+                                    top: 2px;
+                                    left: 24px;
+                                }
+                                
+                            }
+                        }
+                        p {
+                            padding: 18px 0 60px;
+                            font-size: 1.0rem;
+                            line-height: 1.5rem;
+                        }
+                    }
+                }
+            }
+            .company-info {
+                .c-container {
+                    .c-page-title {
+                        margin-bottom: 1.5rem;
+                    }
+                    .company {
+                        .company-top {
+                            grid-template-columns: 1fr;
+                            .info {
+                                margin: 15px 0 0;
+                            }
+                        }
+                        .map {
+                            margin-top: 15px;
+                            iframe {
+                                aspect-ratio: 3/2;
+                            }
+                            .map-link {
+                                font-size: 0.625rem;
+                                line-height: 1.0em;
+                                padding: 5px;
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@include m.mq(tab-2) {
+    .show-about {
+        .c-container {
+            .message {
+                .c-container {
+                    .ceo {
+                        .ceo-top {
+                            .ceo-image {
+                                height: 230px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

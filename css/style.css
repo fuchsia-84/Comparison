@@ -256,6 +256,15 @@ progress {
   --color-service-title: #1C3B7D;
   --color-service-title-alpha: linear-gradient(to bottom, #fff, #2E63D4);
   --color-service-item-shadow: rgba(0, 0, 0, 0.15);
+  --color-page-title: #1C3B7D;
+  --color-name: #fff;
+  --color-name-bg: linear-gradient(to bottom right, #1C3B7D, #2E63D4);
+  --color-name-alpha: linear-gradient(to bottom, #fff, #2E63D4);
+  --color-message-border: #D8D8D8;
+  --color-company-tab: #fff;
+  --color-company-tab-bg: linear-gradient(to top right, #1C3B7D 0%, #3054A0 70%, #2E63D4 100%);
+  --color-map-link: #18478D;
+  --color-map-link-hover: #fff;
 }
 
 :root {
@@ -912,6 +921,80 @@ body {
   border-radius: 50%;
 }
 
+.c-page-title {
+  color: var(--color-page-title);
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+.c-page-title h1 {
+  font-size: 4rem;
+  line-height: 1.5em;
+  font-weight: 900;
+}
+.c-page-title h1::after {
+  display: block;
+  content: "";
+  width: 22px;
+  height: 3px;
+  background-color: var(--color-page-title);
+  margin: 0 auto 10px;
+}
+.c-page-title p {
+  font-size: 1rem;
+  line-height: 1.125rem;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+}
+
+@media screen and (max-width: 1025px) {
+  .c-page-title {
+    margin-bottom: 1.5rem;
+  }
+  .c-page-title h1 {
+    font-size: 3rem;
+  }
+  .c-page-title h1::after {
+    width: 1rem;
+    height: 2px;
+    margin: 0 auto 8px;
+  }
+}
+@media screen and (max-width: 756px) {
+  .c-page-title {
+    margin-bottom: 1.5rem;
+  }
+  .c-page-title h1 {
+    font-size: 1.5rem;
+    line-height: 2.25rem;
+  }
+  .c-page-title h1::after {
+    width: 0.5rem;
+    height: 2px;
+    margin: 0 auto 5px;
+  }
+}
+.c-access {
+  list-style: none;
+  font-size: 1rem;
+  line-height: 1.125rem;
+  padding-left: 6em;
+  position: relative;
+}
+
+.c-access::before {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "アクセス : ";
+}
+
+@media screen and (max-width: 756px) {
+  .c-access {
+    font-size: 0.75rem;
+    line-height: 1.125rem;
+  }
+}
 header {
   /* To Do: add hover animation to global navigation. */
   width: 100%;
@@ -2532,6 +2615,350 @@ footer .page-top-button:hover::before {
   .article .c-container .article-links .latest-all {
     position: static;
     margin: 9px auto 0;
+  }
+}
+.show-about {
+  padding: 100px 0 120px;
+  position: relative;
+}
+.show-about .c-container .vision {
+  padding-bottom: 150px;
+  text-align: center;
+}
+.show-about .c-container .vision .sub-title {
+  font-size: 2.25rem;
+  line-height: 1em;
+  letter-spacing: 0.15em;
+}
+.show-about .c-container .vision .text {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  margin-top: 2.25rem;
+}
+.show-about .c-container .vision::after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  top: 120px;
+  right: 50px;
+  width: 50%;
+  height: 100%;
+  max-width: 52rem;
+  background-image: url(../../img/message_bg_2.svg);
+  background-size: contain;
+}
+.show-about .c-container .message {
+  margin-top: 30px;
+  margin-bottom: 140px;
+}
+.show-about .c-container .message .c-container {
+  width: 100%;
+  max-width: 100%;
+}
+.show-about .c-container .message .c-container .c-page-title {
+  margin-bottom: 4.5rem;
+}
+.show-about .c-container .message .c-container .ceo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.show-about .c-container .message .c-container .ceo .ceo-top {
+  position: relative;
+  z-index: 1;
+}
+.show-about .c-container .message .c-container .ceo .ceo-top .ceo-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: url(../../img/ceo.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.show-about .c-container .message .c-container .ceo .ceo-top .name {
+  display: block;
+  width: 100%;
+  padding: 10px 54px 12px 40px;
+  min-width: 525px;
+  height: 60px;
+  background: var(--color-name-bg);
+  -webkit-clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+          clip-path: polygon(8% 0, 100% 0, 92% 100%, 0 100%);
+  position: absolute;
+  bottom: -30px;
+  right: -35px;
+  z-index: 2;
+}
+.show-about .c-container .message .c-container .ceo .ceo-top .name h1 {
+  display: block;
+  position: absolute;
+  top: 24px;
+  right: 54px;
+  z-index: 4;
+  color: var(--color-name);
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  text-align: right;
+  white-space: nowrap;
+}
+.show-about .c-container .message .c-container .ceo .ceo-top .name span {
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 40px;
+  z-index: 3;
+  font-size: 2rem;
+  line-height: 1em;
+  letter-spacing: -0.1em;
+  font-weight: 900;
+  font-style: italic;
+  background: var(--color-name-alpha);
+  opacity: 0.2;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: left;
+  white-space: nowrap;
+}
+.show-about .c-container .message .c-container .ceo p {
+  display: block;
+  height: auto;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  padding: 60px 0 80px;
+}
+.show-about .c-container .message .c-container .ceo p span {
+  font-weight: 700;
+}
+.show-about .c-container .message::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 40%;
+  height: 5px;
+  background-color: var(--color-message-border);
+  z-index: -2;
+  top: 870px;
+  right: 0;
+}
+.show-about .c-container .message::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 40%;
+  height: 5px;
+  background-color: var(--color-message-border);
+  z-index: -2;
+  top: 1440px;
+  left: 0;
+}
+.show-about .c-container .company-info {
+  margin-top: 30px;
+}
+.show-about .c-container .company-info .c-container {
+  width: 100%;
+  max-width: 100%;
+}
+.show-about .c-container .company-info .c-container .c-page-title {
+  margin-bottom: 4.5rem;
+}
+.show-about .c-container .company-info .c-container .company .company-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  position: relative;
+}
+.show-about .c-container .company-info .c-container .company .company-top .company-image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.show-about .c-container .company-info .c-container .company .company-top .info {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin: 55px 0 75px;
+  align-items: center;
+  border: 1px solid #1C3B7D;
+}
+.show-about .c-container .company-info .c-container .company .company-top .info dt {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 100%;
+  min-height: 42px;
+  font-size: 1rem;
+  line-height: 1.125rem;
+  font-weight: 700;
+  color: var(--color-company-tab);
+  background: var(--color-company-tab-bg);
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #fff;
+}
+.show-about .c-container .company-info .c-container .company .company-top .info dt:last-of-type {
+  border-bottom: none;
+}
+.show-about .c-container .company-info .c-container .company .company-top .info dd {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  height: 100%;
+  min-height: 42px;
+  font-size: 1rem;
+  line-height: 1.125rem;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #1C3B7D;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.show-about .c-container .company-info .c-container .company .company-top .info dd:last-of-type {
+  border-bottom: none;
+}
+.show-about .c-container .company-info .c-container .company .company-top .c-access {
+  position: absolute;
+  bottom: 1.125rem;
+  right: 1.125rem;
+}
+.show-about .c-container .company-info .c-container .company .map {
+  margin-top: 30px;
+}
+.show-about .c-container .company-info .c-container .company .map iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+.show-about .c-container .company-info .c-container .company .map .map-link {
+  text-decoration: none;
+  color: var(--color-map-link);
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  margin-top: 0.625rem;
+  margin-left: 1.25rem;
+}
+.show-about .c-container .company-info .c-container .company .map .map-link:hover {
+  color: var(--color-map-link-hover);
+}
+.show-about .c-container .company-info .c-container .company .map .c-access {
+  margin-top: 0.625rem;
+}
+
+@media screen and (max-width: 1025px) {
+  .show-about .c-container .vision {
+    padding-bottom: 60px;
+  }
+  .show-about .c-container .message {
+    margin-top: 0;
+    margin-bottom: 60px;
+  }
+  .show-about .c-container .message .c-container .ceo .ceo-top .name {
+    padding: 5px 45px 8px 30px;
+    min-width: 100%;
+    height: 48px;
+  }
+  .show-about .c-container .message .c-container .ceo .ceo-top .name h1 {
+    font-size: 1rem;
+    top: 20px;
+    right: 45px;
+  }
+  .show-about .c-container .message .c-container .ceo .ceo-top .name span {
+    font-size: 1.75rem;
+    top: 5px;
+    left: 30px;
+  }
+  .show-about .c-container .message::before {
+    display: none;
+  }
+  .show-about .c-container .message::after {
+    display: none;
+  }
+}
+@media screen and (max-width: 756px) {
+  .show-about .c-container .vision .sub-title {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+  }
+  .show-about .c-container .vision .text {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-top: 1.125rem;
+  }
+  .show-about .c-container .vision::after {
+    width: 81.6%;
+    top: 103px;
+    right: 0;
+  }
+  .show-about .c-container .message {
+    margin-bottom: 0;
+  }
+  .show-about .c-container .message .c-container .c-page-title {
+    margin-bottom: 1.5rem;
+  }
+  .show-about .c-container .message .c-container .ceo {
+    grid-template-columns: 1fr;
+  }
+  .show-about .c-container .message .c-container .ceo .ceo-top {
+    width: 100%;
+    height: 100%;
+  }
+  .show-about .c-container .message .c-container .ceo .ceo-top .ceo-image {
+    width: 100%;
+    height: 450px;
+    background-image: url(../../img/ceo_sp.jpg);
+    background-size: cover;
+  }
+  .show-about .c-container .message .c-container .ceo .ceo-top .name {
+    width: 80%;
+    min-width: 240px;
+    height: 48px;
+    bottom: 0;
+    left: 0;
+    padding: 2px 24px 2px 24px;
+  }
+  .show-about .c-container .message .c-container .ceo .ceo-top .name h1 {
+    font-size: 0.75rem;
+    line-height: 2em;
+    bottom: 2px;
+    right: 24px;
+  }
+  .show-about .c-container .message .c-container .ceo .ceo-top .name span {
+    font-size: 1.125rem;
+    line-height: 1.5rem;
+    top: 2px;
+    left: 24px;
+  }
+  .show-about .c-container .message .c-container .ceo p {
+    padding: 18px 0 60px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .show-about .c-container .company-info .c-container .c-page-title {
+    margin-bottom: 1.5rem;
+  }
+  .show-about .c-container .company-info .c-container .company .company-top {
+    grid-template-columns: 1fr;
+  }
+  .show-about .c-container .company-info .c-container .company .company-top .info {
+    margin: 15px 0 0;
+  }
+  .show-about .c-container .company-info .c-container .company .map {
+    margin-top: 15px;
+  }
+  .show-about .c-container .company-info .c-container .company .map iframe {
+    aspect-ratio: 3/2;
+  }
+  .show-about .c-container .company-info .c-container .company .map .map-link {
+    font-size: 0.625rem;
+    line-height: 1em;
+    padding: 5px;
+    margin-left: 10px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .show-about .c-container .message .c-container .ceo .ceo-top .ceo-image {
+    height: 230px;
   }
 }
 .show-service {
