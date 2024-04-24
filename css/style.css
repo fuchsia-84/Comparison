@@ -857,22 +857,30 @@ body {
   position: relative;
   z-index: 1;
 }
+.c-page-footer .contact-page-footer {
+  background: url(../../img/recruit.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.c-page-footer .contact-page-footer .c-container {
+  visibility: hidden;
+}
 .c-page-footer .contact {
-  width: 100%;
+  width: 56.5%;
   padding: 105px 0;
-  -webkit-clip-path: polygon(0 0, 56.5% 0, 41.3% 100%, 0 100%);
-          clip-path: polygon(0 0, 56.5% 0, 41.3% 100%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 73% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 73% 100%, 0 100%);
 }
 .c-page-footer .contact .c-container img {
   display: none;
 }
 .c-page-footer .recruit {
   margin-top: 0;
-  width: 100%;
+  width: 58.5%;
   padding: 105px 0;
   height: 100%;
-  -webkit-clip-path: polygon(58.7% 0, 100% 0, 100% 100%, 43.4% 100%);
-          clip-path: polygon(58.7% 0, 100% 0, 100% 100%, 43.4% 100%);
+  -webkit-clip-path: polygon(28% 0, 100% 0, 100% 100%, 2% 100%);
+          clip-path: polygon(28% 0, 100% 0, 100% 100%, 2% 100%);
   background: linear-gradient(12deg, var(--color-page-footer-recruit_r), var(--color-for-recruit-bottom));
   position: absolute;
   right: 0;
@@ -884,6 +892,14 @@ body {
 }
 .c-page-footer .recruit .c-container img {
   display: none;
+}
+.c-page-footer .recruit-page-footer {
+  background: url(../../img/contact.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.c-page-footer .recruit-page-footer .c-container {
+  visibility: hidden;
 }
 .c-page-footer .contact::after {
   display: none;
@@ -897,12 +913,26 @@ body {
     display: block;
     position: static;
   }
+  .c-page-footer .contact-page-footer {
+    background: linear-gradient(45deg, var(--color-button-bg-l), var(--color-button-bg-r));
+  }
+  .c-page-footer .contact-page-footer .c-container {
+    visibility: visible;
+  }
+  .c-page-footer .recruit-page-footer {
+    background: linear-gradient(12deg, var(--color-page-footer-recruit_r), var(--color-for-recruit-bottom));
+  }
+  .c-page-footer .recruit-page-footer .c-container {
+    visibility: visible;
+  }
   .c-page-footer .contact {
+    width: 100%;
     -webkit-clip-path: none;
             clip-path: none;
   }
   .c-page-footer .recruit {
     position: static;
+    width: 100%;
     -webkit-clip-path: none;
             clip-path: none;
     background: linear-gradient(45deg, var(--color-for-recruit), var(--color-for-recruit-bottom));

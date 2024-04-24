@@ -6,10 +6,19 @@
     position: relative;
     z-index: 1;
 
+    .contact-page-footer {
+        background: url(../../img/recruit.jpg);
+        background-size: cover;
+        background-position: center;
+        .c-container {
+            visibility: hidden;
+        }
+    }
+
     .contact {
-        width: 100%;
+        width: 56.5%;
         padding: 105px 0;
-        clip-path: polygon(0 0, 56.5% 0, 41.3% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 73% 100%, 0 100%);
         .c-container {
             img {
                 display: none;
@@ -18,10 +27,10 @@
     }
     .recruit {
         margin-top: 0;
-        width: 100%;
+        width: 58.5%;
         padding: 105px 0;
         height: 100%;
-        clip-path: polygon(58.7% 0, 100% 0, 100% 100%, 43.4% 100%);
+        clip-path: polygon(28% 0, 100% 0, 100% 100%, 2% 100%);
         //background: var(--color-for-recruit);
         background: linear-gradient(12deg, var(--color-page-footer-recruit_r), var(--color-for-recruit-bottom));
         position: absolute;
@@ -39,6 +48,15 @@
             }
         }
     }
+    .recruit-page-footer {
+        background: url(../../img/contact.jpg);
+        background-size: cover;
+        background-position: center;
+        .c-container {
+            visibility: hidden;
+        }
+    }
+    
     .contact::after {
         display: none;
     }
@@ -50,11 +68,25 @@
     .c-page-footer {
         display: block;
         position: static;
+        .contact-page-footer {
+            background: linear-gradient(45deg, var(--color-button-bg-l), var(--color-button-bg-r));
+            .c-container {
+                visibility: visible;
+            }
+        }
+        .recruit-page-footer {
+            background: linear-gradient(12deg, var(--color-page-footer-recruit_r), var(--color-for-recruit-bottom));
+            .c-container {
+                visibility: visible;
+            }
+        }
         .contact {
+            width: 100%;
             clip-path: none;
         }
         .recruit {
             position: static;
+            width: 100%;
             clip-path: none;
             background: linear-gradient(45deg, var(--color-for-recruit), var(--color-for-recruit-bottom));
             .c-container {
