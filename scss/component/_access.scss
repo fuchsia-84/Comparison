@@ -6,7 +6,7 @@
     list-style: none;
     font-size: 1.0rem;
     line-height: 1.125rem;
-    padding-left: 6.0em;
+    padding-left: 5.0em;
     position: relative;
 }
 .c-access::before {
@@ -14,7 +14,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    content: 'アクセス : ';
+    content: 'アクセス: ';
 }
 
 @include m.mq(tab) {
