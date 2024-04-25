@@ -1,0 +1,42 @@
+@use "../global/" as g;
+@use "../foundation/mixin" as m;
+
+.show-privacy-policy {
+    padding: 100px 0 120px;
+    .c-container {
+        font-size: 0.625rem;
+        line-height: 2.0em;
+        h1 {
+            font-size: 1.125rem;
+            line-height: 1.5rem;
+        }
+        .title {
+            margin-bottom: 2.0em;
+            a {
+                cursor: pointer;
+                text-decoration: none;
+                font-weight: 700;
+                color: var(--color-privacy-policy-link);
+            }
+        }
+        .contents {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 2.0em;
+            .item {
+                ol {
+                    padding-left: 2.0em;
+                }
+                span {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+
+@include m.mq(pc) {
+    .show-privacy-policy {
+        padding: 80px 0
+    }
+}

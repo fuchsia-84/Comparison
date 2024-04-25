@@ -3363,5 +3363,42 @@ footer .page-top-button:hover::before {
     width: 100%;
   }
 }
+.show-privacy-policy {
+  padding: 100px 0 120px;
+}
+.show-privacy-policy .c-container {
+  font-size: 0.625rem;
+  line-height: 2em;
+}
+.show-privacy-policy .c-container h1 {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+}
+.show-privacy-policy .c-container .title {
+  margin-bottom: 2em;
+}
+.show-privacy-policy .c-container .title a {
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--color-privacy-policy-link);
+}
+.show-privacy-policy .c-container .contents {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 2em;
+}
+.show-privacy-policy .c-container .contents .item ol {
+  padding-left: 2em;
+}
+.show-privacy-policy .c-container .contents .item span {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 1025px) {
+  .show-privacy-policy {
+    padding: 80px 0;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
