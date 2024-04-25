@@ -1,0 +1,205 @@
+@use "../global/" as g;
+@use "../foundation/mixin" as m;
+
+.show-recruit {
+    padding: 100px 0 120px;
+    background-image: url(../../img/pattern.svg);
+    background-repeat: repeat;
+    .c-container {
+        .recruit-top {
+            margin-bottom: 80px;
+            .recruit-title {
+                width: 86%;
+                margin: 0 auto;
+                font-style: italic;
+                color: var(--color-recruit-title);
+                h1 {
+                    display: block;
+                    font-size: 4.0rem;
+                    line-height: 1.0em;
+                    font-weight: 900;
+                    letter-spacing: 0;
+                    text-align: left;
+                    white-space: nowrap;
+                }
+                p {
+                    display: block;
+                    font-size: 3.0rem;
+                    line-height: 1.0em;
+                    font-weight: 700;
+                    letter-spacing: 0;
+                    opacity: 0.59;
+                    text-align: right;
+                    white-space: nowrap;
+                }
+            }
+            .sub-title {
+                text-align: center;
+                font-size: 2.25rem;
+                line-height: 1.0em;
+                letter-spacing: 0.15em;
+                font-weight: 700;
+                margin: 2.25rem 0;
+            }
+            .text {
+                text-align: center;
+                font-size: 1.125rem;
+                line-height: 1.5rem;
+            }
+        }
+        
+        .c-container {
+            width: 100%;
+            max-width: 100%;
+            padding: 80px 50px;
+            background-color: var(--color-position-bg);
+            border: 1px solid var(--color-position-border);
+            border-radius: 30px;
+            dl {
+                display: grid;
+                grid-template-columns: 1fr 4fr;
+                font-size: 1.125rem;
+                line-height: 1.5rem;
+                dt {
+                    display: flex;
+                    align-items: center;
+                    padding-left: 30px;
+                    border-bottom: 1px solid var(--color-position-tab);
+                }
+                dd {
+                    display: flex;
+                    align-items: center;
+                    padding: 1.0rem 0;
+                    padding-left: 30px;
+                    border-bottom: 1px solid var(--color-position-tab);
+                }
+                dd:nth-of-type(3) {
+                    height: auto;
+                }
+                dd:last-of-type {
+                    height: auto;
+                    flex-wrap: wrap;
+                    padding: 2.5rem 0;
+                    padding-left: 30px;
+                    ul {
+                        width: 100%;
+                        height: auto;
+                        padding-left: 1.0em;
+                    }
+                }
+            }
+            .position-bottom {
+                display: block;
+                text-align: center;
+                .c-button {
+                    display: block;
+                    margin: 50px auto 5px;
+                    white-space: nowrap;
+                    color: var(--color-position-button);
+                    background: linear-gradient(90deg, var(--color-button-bg-l), var(--color-button-bg-r));
+                }
+                .c-button:hover {
+                    background: var(--color-button-bg-l);
+                }
+                span {
+                    display: block;
+                    margin: 0 auto;
+                    font-size: 0.75rem;
+                    line-height: 2.0em;
+                }
+            }
+        }
+    }
+}
+
+@include m.mq(pc) {
+    .show-recruit {
+        .c-container {
+            .recruit-top {
+                .recruit-title {
+                    width: 100%;
+                }
+                
+            }
+            
+        }
+    }
+}
+@include m.mq(tab) {
+    .show-recruit {
+        padding: 80px 0;
+        background-image: url(../../img/pattern_sp.svg);
+        background-repeat: repeat;
+        .c-container {
+            .recruit-top {
+                margin-bottom: 60px;
+                .recruit-title {
+                    h1 {
+                        font-size: 2.25rem;
+                    }
+                    p {
+                        font-size: 2.0rem;
+                    }
+                }
+                .sub-title {
+                    font-size: 1.125rem;
+                    line-height: 1.5rem;
+                    margin: 1.125rem 0;
+                }
+                .text {
+                    font-size: 0.875rem;
+                    line-height: 1.5em;
+                }
+            }
+            .c-container {
+                padding: 38px 10px;
+                dl {
+                    grid-template-columns: 1fr;
+                    font-size: 0.875rem;
+                    line-height: 1.5em;
+                    dt {
+                        border: none;
+                        padding: 10px 0 5px;
+                        padding-left: 10px;
+                        font-weight: 700;
+                    }
+                    dd {
+                        padding: 0 0 10px;
+                        padding-left: 10px;
+                    }
+                    dd:last-of-type {
+                        padding: 5px 10px 10px;
+                        ul {
+                            font-size: 0.75rem;
+                            line-height: 2.0em;
+                        }
+                    }
+                }
+                .position-bottom {
+                    .c-button {
+                        margin: 24px auto 5px;
+                    }
+                
+                }
+            }
+            
+        }
+    }
+}
+@include m.mq(tab-2) {
+    .show-recruit {
+        .c-container {
+            .recruit-top {
+                .recruit-title {
+                    h1 {
+                        font-size: 1.5rem;
+                    }
+                    p {
+                        font-size: 1.125rem;
+                        line-height: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+}
