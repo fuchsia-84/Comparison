@@ -107,6 +107,10 @@ footer {
                             text-decoration: none;
                             font-weight: 700;
                         }
+                        a:hover {
+                            cursor: pointer;
+                            color: var(--color-footer-menu-hover);
+                        }
                     }
                     li:last-of-type {
                         font-size: 0.75rem;
@@ -126,6 +130,10 @@ footer {
                         a {
                             color: var(--color-footer);
                             text-decoration: none;
+                        }
+                        a:hover {
+                            cursor: pointer;
+                            color: var(--color-footer-menu-hover);
                         }
                     }
                     

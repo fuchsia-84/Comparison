@@ -240,6 +240,7 @@ progress {
   --color-footer: #fff;
   --color-copy: #CA9D71;
   --color-page-top: #042771;
+  --color-footer-menu-hover: #042771;
   --color-bg-breadcrumb: #EAEAEA;
   --color-breadcrumb: #A1ADC9;
   --color-breadcrumb-bar: #698DD9;
@@ -2047,6 +2048,10 @@ footer .c-container .footer-contents .menu .footer-nav li a {
   text-decoration: none;
   font-weight: 700;
 }
+footer .c-container .footer-contents .menu .footer-nav li a:hover {
+  cursor: pointer;
+  color: var(--color-footer-menu-hover);
+}
 footer .c-container .footer-contents .menu .footer-nav li:last-of-type {
   font-size: 0.75rem;
 }
@@ -2067,6 +2072,10 @@ footer .c-container .footer-contents .menu .sns-links li {
 footer .c-container .footer-contents .menu .sns-links li a {
   color: var(--color-footer);
   text-decoration: none;
+}
+footer .c-container .footer-contents .menu .sns-links li a:hover {
+  cursor: pointer;
+  color: var(--color-footer-menu-hover);
 }
 footer .page-top-button {
   display: none;
