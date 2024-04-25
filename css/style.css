@@ -1959,7 +1959,6 @@ header.open .c-container .navigations .c-nav {
   }
 }
 footer {
-  /* To Do: add hover style to navigation. */
   margin-top: 120px;
   padding: 120px 0 0;
   color: var(--color-footer);
