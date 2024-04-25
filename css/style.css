@@ -1089,6 +1089,22 @@ header .c-container .navigations .c-nav {
 }
 header .c-container .navigations .c-nav li a {
   color: var(--color-header);
+  position: relative;
+}
+header .c-container .navigations .c-nav li a::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: var(--color-header);
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  transition: all 0.3s;
+  transform: scale(0, 1);
+  transform-origin: left top;
+}
+header .c-container .navigations .c-nav li a:hover::after {
+  transform: scale(1, 1);
 }
 header .c-container .navigations .c-nav :nth-child(4), header .c-container .navigations .c-nav :nth-child(5) {
   display: none;
@@ -1206,6 +1222,9 @@ header.fixed {
   }
   header .c-container .navigations .c-nav li a {
     color: var(--color-nav-sp);
+  }
+  header .c-container .navigations .c-nav li a::after {
+    background-color: var(--color-nav-sp);
   }
 }
 header.open .c-container .ui .toggle span:nth-of-type(1) {
