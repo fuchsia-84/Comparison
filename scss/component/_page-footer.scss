@@ -39,6 +39,8 @@
         z-index: 2;
         .c-container {
             .recruit-contents {
+                width: 100%;
+                padding-left: 20%;
                 .c-button:hover {
                     color: var(--color-for-recruit);
                 }
@@ -91,6 +93,7 @@
             background: linear-gradient(45deg, var(--color-for-recruit), var(--color-for-recruit-bottom));
             .c-container {
                 .recruit-contents {
+                    padding-left: 0;
                     .c-button:hover {
                         color: var(--color-bottom);
                     }

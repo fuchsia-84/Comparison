@@ -897,6 +897,10 @@ body {
   top: 0;
   z-index: 2;
 }
+.c-page-footer .recruit .c-container .recruit-contents {
+  width: 100%;
+  padding-left: 20%;
+}
 .c-page-footer .recruit .c-container .recruit-contents .c-button:hover {
   color: var(--color-for-recruit);
 }
@@ -946,6 +950,9 @@ body {
     -webkit-clip-path: none;
             clip-path: none;
     background: linear-gradient(45deg, var(--color-for-recruit), var(--color-for-recruit-bottom));
+  }
+  .c-page-footer .recruit .c-container .recruit-contents {
+    padding-left: 0;
   }
   .c-page-footer .recruit .c-container .recruit-contents .c-button:hover {
     color: var(--color-bottom);
@@ -1036,7 +1043,6 @@ body {
   }
 }
 header {
-  /* To Do: fix header width between 1000 ~ 1100 */
   width: 100%;
   max-width: 100%;
   height: auto;
