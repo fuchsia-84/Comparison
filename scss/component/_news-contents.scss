@@ -32,9 +32,6 @@
                 font-size: 1.0rem;
                 line-height: 1.625rem;
                 font-weight: 400;
-                /*
-                * To Do: define optimal width in order to display text overflow ellipsis.
-                */
                 overflow: hidden;
                 text-overflow: ellipsis;
             }
