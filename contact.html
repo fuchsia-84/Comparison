@@ -95,8 +95,48 @@
             </div>
         </nav>
         <!-- //Bread Crumb-->
-        <!-- Contact -->
+        <!-- Contact Contents -->
         <div class="show-contact">
+            <div class="c-container">
+                <h1>WEBコンサルティングのご依頼やお見積り、当社についてのご質問など、どうぞお気軽にお知らせください。</h1>
+                <div class="c-container">
+                    <form name="contact-form" netlify method="POST" autocomplete="off" data-netlify="true" action="complete.html">
+                        <div class="form-item">
+                            <label for="type">お問い合わせ種別<span class="required"></span><br/></label>
+                            <div class="radio-input">
+                                <label><input type="radio" id="type" name="type" value="お仕事のご依頼・ご相談" required checked>お仕事のご依頼・ご相談</label>
+                                <label><input type="radio" id="type_2" name="type" value="お見積りのご依頼">お見積りのご依頼</label>
+                                <label><input type="radio" id="type_3" name="type" value="採用について">採用について</label>
+                                <label><input type="radio" id="type_4" name="type" value="その他">その他</label>
+                            </div>
+                        </div>
+                        <div class="form-item">
+                            <label for="name">お名前<span class="required"></span><br/></label><input type="text" name="name" id="name" required/>
+                        </div>
+                        <div class="form-item">
+                            <label for="work">会社名<span class="required"></span><br/></label><input type="text" name="work" id="work" required/>
+                        </div>
+                        <div class="form-item">
+                            <label for="email">メールアドレス<span class="required"></span></label><br/><input type="text" name="email" id="email" required/>
+                        </div>
+                        <div class="form-item">
+                            <label for="email">電話番号<span class="tel">&#40;半角数字ハイフンなし&#41;</span><br/></label>
+                            <input type="tel" name="tel" pattern="[\d\-]*" maxlength="11">
+                        </div>
+                        <div class="form-item">
+                            <label for="question">お問い合わせ内容<span class="required"></span><br/></label><textarea name="question" id="question" placeholder="お問い合わせ内容を具体的にご記入くださいませ。" required></textarea>
+                        </div>
+                        <div class="form-item">
+                            <input class="checkbox" type="checkbox" id="agree" /><label for="agree"><a class="privacy-policy-link" href="#">プライバシーポリシー</a>に同意する<span class="required"></span><br/></label>
+                        </div>
+                        <div class="form-item">
+                            <button class="c-button submit" type="submit" id="submit" disabled>同意して送信</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- //Contact Contents -->
 
         </div>
         <!-- //Contact -->
@@ -186,6 +226,7 @@
         <script src="./js/add_fixed.js"></script>
         <script src="./js/nav_toggle.js"></script>
         <script src="./js/slick_slide.js"></script>
+        <script src="./js/agree.js"></script>
         <!-- /Script-->
 
         <!-- Font Awesome -->

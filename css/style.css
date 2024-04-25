@@ -265,6 +265,13 @@ progress {
   --color-company-tab-bg: linear-gradient(to top right, #1C3B7D 0%, #3054A0 70%, #2E63D4 100%);
   --color-map-link: #18478D;
   --color-map-link-hover: #fff;
+  --color-contact-bg: #ECEEF3;
+  --color-required: #1751CD;
+  --color-form-border: #AAA;
+  --color-form-bg: #fff;
+  --color-privacy-policy-link: #1751CD;
+  --color-submit: #AAAAAA;
+  --color-submit-bg: #E0E0E0;
 }
 
 :root {
@@ -1027,6 +1034,7 @@ body {
 }
 header {
   /* To Do: add hover animation to global navigation. */
+  /* To Do: fix header width between 1000 ~ 1100 */
   width: 100%;
   max-width: 100%;
   height: auto;
@@ -3171,6 +3179,188 @@ footer .page-top-button:hover::before {
     font-size: 0.825rem;
     line-height: 1.5em;
     margin-top: 1.125rem;
+  }
+}
+.show-contact {
+  padding: 100px 0 120px;
+  color: var(--color-section);
+}
+.show-contact .c-container {
+  display: block;
+}
+.show-contact .c-container h1 {
+  text-align: center;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+.show-contact .c-container .c-container {
+  width: 100%;
+  padding: 100px 0;
+  background-color: var(--color-contact-bg);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.show-contact .c-container .c-container .required {
+  display: inline-block;
+  font-size: 0.75rem;
+  line-height: 0.875rem;
+  margin-left: 0.625rem;
+  margin-top: 4.5px;
+  vertical-align: top;
+}
+.show-contact .c-container .c-container .required::after {
+  content: "*必須";
+  color: var(--color-required);
+  font-weight: 700;
+}
+.show-contact .c-container .c-container form {
+  display: flex;
+  width: 61.2%;
+  max-width: 600px;
+  flex-wrap: wrap;
+  row-gap: 30px;
+}
+.show-contact .c-container .c-container form .form-item {
+  width: 100%;
+}
+.show-contact .c-container .c-container form .form-item label:first-of-type {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+}
+.show-contact .c-container .c-container form .form-item input {
+  width: 300px;
+  height: 40px;
+  border: 1px solid var(--color-form-border);
+  background-color: var(--color-form-bg);
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 0 0.5rem;
+}
+.show-contact .c-container .c-container form .form-item .radio-input {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 35px;
+       column-gap: 35px;
+  row-gap: 10px;
+  margin: 5px auto 0;
+  font-size: 1rem;
+  line-height: 1.125rem;
+}
+.show-contact .c-container .c-container form .form-item .radio-input label:first-of-type {
+  font-size: 1rem;
+  line-height: 1.125rem;
+  font-weight: 400;
+}
+.show-contact .c-container .c-container form .form-item .radio-input label::after {
+  content: "";
+  width: 100%;
+}
+.show-contact .c-container .c-container form .form-item .radio-input label:nth-of-type(n+4) {
+  order: 1;
+}
+.show-contact .c-container .c-container form .form-item .radio-input input {
+  width: auto;
+  height: auto;
+  margin-top: 0;
+  margin-right: 5px;
+}
+.show-contact .c-container .c-container form .form-item textarea {
+  width: 600px;
+  height: 255px;
+  border-radius: 5px;
+  margin-top: 5px;
+  border: 1px solid var(--color-form-border);
+  padding: 0.5rem;
+  background-color: var(--color-form-bg);
+}
+.show-contact .c-container .c-container form .form-item textarea::-moz-placeholder {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.show-contact .c-container .c-container form .form-item textarea::placeholder {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.show-contact .c-container .c-container form .form-item .checkbox {
+  width: 1rem;
+  height: 1rem;
+  margin-top: 0;
+  margin-right: 10px;
+}
+.show-contact .c-container .c-container form .form-item .checkbox:hover {
+  cursor: pointer;
+}
+.show-contact .c-container .c-container form .form-item .privacy-policy-link {
+  text-decoration: none;
+  color: var(--color-privacy-policy-link);
+  margin-right: 0.5rem;
+}
+.show-contact .c-container .c-container form .form-item .privacy-policy-link:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.show-contact .c-container .c-container form .form-item .submit {
+  white-space: nowrap;
+  border: 1px solid var(--color-button-bg-l);
+  color: var(--color-button);
+  background: linear-gradient(90deg, var(--color-button-bg-l), var(--color-button-bg-r));
+}
+.show-contact .c-container .c-container form .form-item .submit[disabled] {
+  cursor: not-allowed;
+  color: var(--color-submit);
+  background: var(--color-submit-bg);
+  border: none;
+}
+
+@media screen and (max-width: 1025px) {
+  .show-contact {
+    padding: 40px 0 0;
+  }
+  .show-contact .c-container {
+    width: 100%;
+    max-width: 100%;
+  }
+  .show-contact .c-container h1 {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    margin-bottom: 20px;
+  }
+  .show-contact .c-container .c-container {
+    width: 100%;
+    max-width: 100%;
+    padding: 80px 0;
+  }
+}
+@media screen and (max-width: 756px) {
+  .show-contact .c-container h1 {
+    display: block;
+    width: calc(100% - 30px);
+    text-align: left;
+    margin: 0 auto 20px;
+  }
+  .show-contact .c-container .c-container form {
+    width: calc(100% - 30px);
+    max-width: calc(100% - 30px);
+  }
+  .show-contact .c-container .c-container form .form-item input {
+    width: 87%;
+    max-width: 300px;
+  }
+  .show-contact .c-container .c-container form .form-item .radio-input {
+    flex-wrap: wrap;
+    row-gap: 1.5rem;
+    margin: 10px auto 0;
+  }
+  .show-contact .c-container .c-container form .form-item .radio-input label {
+    width: 100%;
+  }
+  .show-contact .c-container .c-container form .form-item textarea {
+    width: 100%;
   }
 }
 
