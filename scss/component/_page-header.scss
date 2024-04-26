@@ -8,7 +8,7 @@
     padding: 202px 0 50px;
     background-image: url(../../img/page_header.png);
     background-size: cover;
-    color: var(--color-header);
+    color: var(--color-hero);
     .c-container {
         width: 68%;
         max-width: 980px;
@@ -27,7 +27,7 @@
             display: inline-block;
             width: 3px;
             height: 30px;
-            background-color: var(--color-header);
+            background-color: var(--color-hero);
             margin-right: 15px;
             transform: rotate(30deg);
         }

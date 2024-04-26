@@ -7,7 +7,7 @@ html {
 }
 body {
     font-family: var(--font-base);
-    background: linear-gradient(180deg, var(--color-bg-t) 40%, var(--color-bg-b) 100%);
+    background: var(--color-main-bg);
     color: var(--color-main);
     min-width: 280px;
 }

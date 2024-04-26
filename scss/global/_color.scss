@@ -1,68 +1,78 @@
 :root {
-    --color-bg-t: #fff;
-    --color-bg-b: #698DD9;
+    /* base color */
     --color-main: #333;
     --color-hero: #fff;
+    --color-dark-blue: #042771;
+    --color-strong-blue: #1C3B7D;
+    --color-bright-blue: #2E63D4;
+    --color-sub: #555;
+
+    /* color for c-button*/
+    --color-button: #fff;
+    --color-button-bg: linear-gradient(to right, var(--color-strong-blue), var(--color-bright-blue));
+
+    /* color for home parts */
+    --color-main-bg: linear-gradient(to bottom, #fff 40%, #698DD9 100%);
     --color-slide-dot: rgb(255,255,255,0.25);
-    --color-header: #fff;
-    --color-header-fixed-bg: #042771;
-    --color-nav-sp: #042771;
     --color-nav-sp-bg: rgb(255,255,255,0.9);
     --color-for-contact: #2E63D4;
     --color-for-recruit: #FF7F00;
-    --color-news-header: #fff;
-    --color-news-header-bg: #FF7F00;
+    --color-for-news: #FF7F00;
     --color-category-bg: #D9D9D9;
-    --color-section-title: #1C3B7D;
-    --color-about-sub: #555;
-    --color-button: #fff;
-    --color-button-bg-l: #1C3B7D;
-    --color-button-bg-r: #2E63D4;
     --color-about-bg: #eee;
     --color-service-bg: #fff;
     --color-service-scroll: #1C3B7D;
-    --color-bottom: #fff;
+    --color-blue-slash-bg: linear-gradient(to top, var(--color-strong-blue), var(--color-bright-blue));
+    --color-bottom-bg: linear-gradient(to top right, var(--color-strong-blue), var(--color-bright-blue));
+    --color-bottom-bg-r: linear-gradient(to bottom left, var(--color-strong-blue), var(--color-bright-blue));
+    --color-footer-bg: linear-gradient(to top, var(--color-strong-blue), var(--color-bright-blue));
     --color-bottom-line: #FF7F00;
     --color-for-recruit-bottom: #E97400;
-    --color-footer: #fff;
     --color-copy: #CA9D71;
-    --color-page-top: #042771;
-    --color-footer-menu-hover: #042771;
+
+    /* color for page parts */
+    /* common */
     --color-bg-breadcrumb: #EAEAEA;
     --color-breadcrumb: #A1ADC9;
     --color-breadcrumb-bar: #698DD9;
     --color-breadcrumb-current: #1751CD;
     --color-page-footer-recruit_r: #FF9A35;
-    --color-news-button-to-article: #fff;
+    --color-page-title: var(--color-strong-blue);
+    /* news */
+    --color-news-button-to-article: var(--color-hero);
     --color-news-button-to-article-bg: #18478D;
-    --color-circle-button: #fff;
-    --color-circle-button-bg: linear-gradient(-45deg, #1C3B7D 0%, #2E63D4 40%, #FFBB77 100%);
+    --color-circle-button: var(--color-hero);
+    --color-circle-button-bg: linear-gradient(-45deg, var(--color-strong-blue) 0%, var(--color-bright-blue) 40%, #FFBB77 100%);
+    /* article */
     --color-article-point: #18478D;
-    --color-article-links: #1C3B7D;
+    --color-article-links: var(--color-strong-blue);
     --color-article-links-hover: #A1ADC9;
-    --color-service-item-bg: #fff;
-    --color-service-title: #1C3B7D;
-    --color-service-title-alpha: linear-gradient(to bottom, #fff, #2E63D4);
+    /* service */
+    --color-service-item-bg: var(--color-hero);
+    --color-service-title: var(--color-strong-blue);
+    --color-service-title-alpha: linear-gradient(to bottom, var(--color-hero), var(--color-bright-blue));
     --color-service-item-shadow: rgba(0, 0, 0, 0.15);
-    --color-page-title: #1C3B7D;
-    --color-name: #fff;
-    --color-name-bg: linear-gradient(to bottom right, #1C3B7D, #2E63D4);
-    --color-name-alpha: linear-gradient(to bottom, #fff, #2E63D4);
+    /* company */
+    --color-name: var(--color-hero);
+    --color-name-bg: linear-gradient(to bottom right, var(--color-strong-blue), var(--color-bright-blue));
+    --color-name-alpha: linear-gradient(to bottom, var(--color-hero), var(--color-bright-blue));
     --color-message-border: #D8D8D8;
-    --color-company-tab: #fff;
-    --color-company-tab-bg: linear-gradient(to top right, #1C3B7D 0%, #3054A0 70%, #2E63D4 100%);
+    --color-company-tab: var(--color-hero);
+    --color-company-tab-bg: linear-gradient(to top right, var(--color-strong-blue) 0%, #3054A0 70%, var(--color-bright-blue) 100%);
     --color-map-link: #18478D;
-    --color-map-link-hover: #fff;
+    --color-map-link-hover: var(--color-hero);
+    /* contact */
     --color-contact-bg: #ECEEF3;
     --color-required: #1751CD;
     --color-form-border: #AAA;
-    --color-form-bg: #fff;
+    --color-form-bg: var(--color-hero);
     --color-privacy-policy-link: #1751CD;
     --color-submit: #AAAAAA;
     --color-submit-bg: #E0E0E0;
-    --color-recruit-title: #1C3B7D;
-    --color-position-bg: #fff;
-    --color-position-border: #2E63D4;
+    /* recruit */
+    --color-recruit-title: var(--color-strong-blue);
+    --color-position-bg: var(--color-hero);
+    --color-position-border: var(--color-bright-blue);
     --color-position-tab: #D9D9D9;
-    --color-position-button: #fff;
+    --color-position-button: var(--color-hero);
 }

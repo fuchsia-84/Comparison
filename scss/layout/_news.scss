@@ -9,17 +9,17 @@
         flex-wrap: nowrap;
         width: 100%;
         position: relative;
-        border: 5px solid var(--color-news-header);
-        background-color: var(--color-news-header);
+        border: 5px solid var(--color-hero);
+        background-color: var(--color-hero);
         .news-header {
             display: flex;
             flex-wrap: wrap;
             width: 20%;
             justify-content: center;
             align-items: center;
-            color: var(--color-news-header);
+            color: var(--color-hero);
             padding: 2.75rem 2.9rem;
-            background-color: var(--color-news-header-bg);
+            background-color: var(--color-for-news);
             div {
                 font-weight: 700;
                 text-align: center;
@@ -40,7 +40,7 @@
         }
         .news-button {
             cursor: pointer;
-            color: var(--color-news-header);
+            color: var(--color-hero);
             background-color: transparent;
             position: absolute;
             bottom: 0;
@@ -68,15 +68,15 @@
             }
         }
         .news-button:hover span {
-            color: var(--color-news-header-bg);
-            background-color: var(--color-news-header);
+            color: var(--color-for-news);
+            background-color: var(--color-hero);
         }
         .news-button::before {
             display: block;
             content: '';
             width: 12.875rem;
             height: 2.25rem;
-            background-color: var(--color-news-header-bg);
+            background-color: var(--color-for-news);
             clip-path: polygon(10% 0, 100% 0, calc(100% - 10%) 100%, 0 100%);
             position: absolute;
             z-index: 10;
@@ -95,7 +95,7 @@
             flex-wrap: wrap;
             background-color: transparent;
             .c-news-contents {
-                background-color: var(--color-news-header);
+                background-color: var(--color-hero);
                 padding: 1.25rem 15px 15px;
             }
             .news-header {
@@ -128,7 +128,7 @@
                 position: static;
                 margin-left: 15px;
                 margin-bottom: 20px;
-                border: 1px solid var(--color-news-header-bg);
+                border: 1px solid var(--color-for-news);
                 text-decoration: none;
             }
             .news-button span {
@@ -139,8 +139,8 @@
                 font-size: 0.75rem;
                 line-height: 1.0em;
                 clip-path: none;
-                color: var(--color-news-header-bg);
-                background-color: var(--color-news-header);
+                color: var(--color-for-news);
+                background-color: var(--color-hero);
                 text-decoration: none;
                 i {
                     font-size: 0.75rem;
@@ -148,8 +148,8 @@
                 }
             }
             .news-button:hover span {
-                color: var(--color-news-header);
-                background-color: var(--color-news-header-bg);
+                color: var(--color-hero);
+                background-color: var(--color-for-news);
                 text-decoration: none;
             }
             .news-button::before {

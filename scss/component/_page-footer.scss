@@ -71,7 +71,7 @@
         display: block;
         position: static;
         .contact-page-footer {
-            background: linear-gradient(45deg, var(--color-button-bg-l), var(--color-button-bg-r));
+            background: var(--color-bottom-bg);
             .c-container {
                 visibility: visible;
             }
@@ -95,7 +95,7 @@
                 .recruit-contents {
                     padding-left: 0;
                     .c-button:hover {
-                        color: var(--color-bottom);
+                        color: var(--color-hero);
                     }
                 }
             }

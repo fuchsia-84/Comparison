@@ -9,7 +9,7 @@
     content: '';
     width: 1.25rem;
     height: 3.125rem;
-    background: linear-gradient(360deg, var(--color-button-bg-l), var(--color-button-bg-r));
+    background: var(--color-blue-slash-bg);
     transform: skewX(-30deg);
     position: absolute;
     top: -1.25rem;

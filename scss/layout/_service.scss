@@ -42,10 +42,10 @@
                     margin-left: 5px;
                     margin-top: 3.5rem;
                     color: var(--color-service-bg);
-                    background: linear-gradient(90deg, var(--color-button-bg-l), var(--color-button-bg-r));
+                    background: var(--color-button-bg);
                 }
                 .c-button:hover {
-                    background: var(--color-button-bg-l);
+                    background: var(--color-strong-blue);
                 }
             }
             .service-sub {

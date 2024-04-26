@@ -4,9 +4,9 @@
 footer {
     margin-top: 120px;
     padding: 120px 0 0;
-    color: var(--color-footer);
+    color: var(--color-hero);
     position: relative;
-    background: linear-gradient(180deg, var(--color-button-bg-r), var(--color-button-bg-l));
+    background: var(--color-footer-bg);
     .c-container {
         .copyright {
             font-size: 0.75rem;
@@ -39,7 +39,7 @@ footer {
                         line-height: 1.5em;
                         font-weight: 900;
                         letter-spacing: 0;
-                        color: var(--color-footer);
+                        color: var(--color-hero);
                     }
                 }
                 .company {
@@ -102,13 +102,13 @@ footer {
                         letter-spacing: 0.2em;
                         width: 50%;
                         a {
-                            color: var(--color-footer);
+                            color: var(--color-hero);
                             text-decoration: none;
                             font-weight: 700;
                         }
                         a:hover {
                             cursor: pointer;
-                            color: var(--color-footer-menu-hover);
+                            color: var(--color-dark-blue);
                         }
                     }
                     li:last-of-type {
@@ -127,12 +127,12 @@ footer {
                         line-height: 1.0em;
                         width: 1.0em;
                         a {
-                            color: var(--color-footer);
+                            color: var(--color-hero);
                             text-decoration: none;
                         }
                         a:hover {
                             cursor: pointer;
-                            color: var(--color-footer-menu-hover);
+                            color: var(--color-dark-blue);
                         }
                     }
                     
@@ -153,7 +153,7 @@ footer {
             display: block;
             cursor: pointer;
             text-decoration: none;
-            color: var(--color-footer);
+            color: var(--color-hero);
             padding: 3.375rem 0.875rem 0.875rem 3.875rem;
         }
     }
@@ -173,7 +173,7 @@ footer {
         display: block;
         width: 96px;
         height: 96px;
-        background-color: var(--color-page-top);
+        background-color: var(--color-dark-blue);
         clip-path: polygon(100% 0, 100% 100%, 0 100%);
         position: absolute;
         z-index: -1;
@@ -185,7 +185,7 @@ footer {
         display: block;
         width: 100px;
         height: 100px;
-        background-color: var(--color-page-top);
+        background-color: var(--color-dark-blue);
         clip-path: polygon(100% 0, 100% 100%, 0 100%);
         position: absolute;
         z-index: -2;
@@ -194,11 +194,11 @@ footer {
     }
     .page-top-button:hover {
         a {
-            color: var(--color-page-top);
+            color: var(--color-dark-blue);
         }
     }
     .page-top-button:hover::before {
-        background-color: var(--color-footer);
+        background-color: var(--color-hero);
     }
     
     

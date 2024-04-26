@@ -13,7 +13,7 @@
     color: var(--color-button);
 }
 .bg-left:hover span {
-    color: var(--color-button-bg-l);
+    color: var(--color-strong-blue);
 }
 .bg-left::before {
     content: '';
@@ -36,7 +36,7 @@
     z-index: 3;
 }
 .bg-left:hover::after {
-    color: var(--color-button-bg-l);
+    color: var(--color-strong-blue);
 }
 
 /* bg-left for bottom */
@@ -46,7 +46,7 @@
     color: var(--color-button);
 }
 .bg-left-b:hover span {
-    color: var(--color-button-bg-r);
+    color: var(--color-bright-blue);
 }
 .bg-left-b::before {
     content: '';
@@ -69,5 +69,5 @@
     z-index: 3;
 }
 .bg-left-b:hover::after {
-    color: var(--color-button-bg-r);
+    color: var(--color-bright-blue);
 }

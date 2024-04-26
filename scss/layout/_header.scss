@@ -34,7 +34,7 @@ header {
                     line-height: 1.375em;
                     letter-spacing: 0;
                     font-weight: 900;
-                    color: var(--color-header);
+                    color: var(--color-hero);
                 }
             }
         }
@@ -42,21 +42,21 @@ header {
             display: flex;
             flex-wrap: nowrap;
             .c-nav {
-                color: var(--color-header);
+                color: var(--color-hero);
                 font-size: 1.0rem;
                 line-height: 1.0em;
                 font-weight: bold;
                 margin-right: 30px;
                 li {
                     a {
-                        color: var(--color-header);
+                        color: var(--color-hero);
                         position: relative;
                     }
                     a::after {
                         content: '';
                         width: 100%;
                         height: 2px;
-                        background-color: var(--color-header);
+                        background-color: var(--color-hero);
                         position: absolute;
                         bottom: -8px;
                         left: 0;
@@ -79,16 +79,16 @@ header {
                 li {
                     a {
                         text-decoration: none;
-                        color: var(--color-header);
+                        color: var(--color-hero);
                     }
                 }
                 .for-contact:hover {
                     color: var(--color-for-contact);
-                    background-color: var(--color-header);
+                    background-color: var(--color-hero);
                 }
                 .for-recruit:hover {
                     color: var(--color-for-recruit);
-                    background-color: var(--color-header);
+                    background-color: var(--color-hero);
                 }
             }
 
@@ -98,7 +98,7 @@ header {
     
 }
 header.fixed {
-    background-color: var(--color-header-fixed-bg);
+    background-color: var(--color-dark-blue);
     @include m.animation(
         $name: fade-in,
         $duration: 1.5s,
@@ -128,7 +128,7 @@ header.fixed {
                     display: block;
                     width: 1px;
                     height: 24px;
-                    background-color: var(--color-header);
+                    background-color: var(--color-hero);
                 }
                 .toggle {
                     cursor: pointer;
@@ -141,7 +141,7 @@ header.fixed {
                         width: 24px;
                         height: 2px;
                         border-radius: 2px;
-                        background-color: var(--color-header);
+                        background-color: var(--color-hero);
                         position: absolute;
                         transition: .35s ease-in-out;
                     }
@@ -183,10 +183,10 @@ header.fixed {
                         flex-grow: 0.2;
                         text-align: center;
                         a {
-                            color: var(--color-nav-sp);
+                            color: var(--color-dark-blue);
                         }
                         a::after {
-                            background-color: var(--color-nav-sp);
+                            background-color: var(--color-dark-blue);
                         }
                     }
                 }

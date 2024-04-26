@@ -34,6 +34,7 @@
                 }
             }
             .sub-title {
+                color: var(--color-sub);
                 text-align: center;
                 font-size: 2.25rem;
                 line-height: 1.0em;
@@ -96,10 +97,10 @@
                     margin: 50px auto 5px;
                     white-space: nowrap;
                     color: var(--color-position-button);
-                    background: linear-gradient(90deg, var(--color-button-bg-l), var(--color-button-bg-r));
+                    background: var(--color-button-bg);
                 }
                 .c-button:hover {
-                    background: var(--color-button-bg-l);
+                    background: var(--color-strong-blue);
                 }
                 span {
                     display: block;

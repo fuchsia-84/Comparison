@@ -3,8 +3,8 @@
 
 .contact {
     padding: 140px 0;
-    color: var(--color-bottom);
-    background: linear-gradient(12deg, var(--color-button-bg-l), var(--color-button-bg-r));
+    color: var(--color-hero);
+    background: var(--color-bottom-bg);
     position: relative;
     .c-container {
         .contact-contents {
@@ -13,12 +13,12 @@
             }
             .c-button {
                 display: block;
-                color: var(--color-bottom);
-                border-color: var(--color-bottom);
+                color: var(--color-hero);
+                border-color: var(--color-hero);
             }
             .c-button:hover {
-                color: var(--color-button-bg-l);
-                background-color: var(--color-bottom);
+                color: var(--color-strong-blue);
+                background-color: var(--color-hero);
             }
         }
         img {
@@ -49,7 +49,7 @@
 @include m.mq(pc) {
     .contact {
         padding: 3.0rem 0;
-        background: linear-gradient(45deg, var(--color-button-bg-l), var(--color-button-bg-r));
+        background: var(--color-bottom-bg);
         .c-container {
             .contact-contents {
                 text-align: center;
@@ -58,12 +58,12 @@
                 }
                 .c-button {
                     display: inline-block;
-                    border: 1px solid var(--color-bottom);
-                    background: var(--color-bottom);
+                    border: 1px solid var(--color-hero);
+                    background: var(--color-hero);
                     color: var(--color-for-contact);
                 }
                 .c-button:hover {
-                    color: var(--color-bottom);
+                    color: var(--color-hero);
                     background: transparent;
                 }
             }
