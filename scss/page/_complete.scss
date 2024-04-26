@@ -1,0 +1,35 @@
+@use "../global/" as g;
+@use "../foundation/mixin" as m;
+
+.show-complete {
+    padding: 100px 0 120px;
+    .c-container {
+        text-align: center;
+        p {
+            font-size: 1.125rem;
+            line-height: 2.0rem;
+            margin-bottom: 60px;
+        }
+        .c-button {
+            display: block;
+            white-space: nowrap;
+            color: var(--color-hero);
+            background: var(--color-button-bg);
+            margin: 0 auto;
+        }
+        .c-button:hover {
+            background: var(--color-strong-blue);
+        }
+    }
+}
+
+@include m.mq(tab) {
+    .show-complete {
+        padding: 80px 0;
+        .c-container {
+            p {
+                font-size: 1.0rem;
+            }
+        }
+    }
+}
