@@ -1817,6 +1817,9 @@ header.open .c-container .navigations .c-nav {
     background-color: var(--color-service-scroll);
     border-radius: 5px;
   }
+  .service .c-container .service-contents .service-sub::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+  }
 }
 .contact {
   padding: 140px 0;

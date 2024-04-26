@@ -134,6 +134,9 @@
                     background-color: var(--color-service-scroll);
                     border-radius: 5px;
                 }
+                .service-sub::-webkit-scrollbar-thumb:hover {
+                    cursor: pointer;
+                }
             }
         }
     }
