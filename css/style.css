@@ -2298,6 +2298,7 @@ footer .page-top-button:hover::before {
   -webkit-line-clamp: 2;
 }
 .show-news .c-container .c-news-contents .item a .detail {
+  display: -webkit-box;
   width: 81%;
   font-size: 0.625rem;
   line-height: 0.75rem;
@@ -2308,6 +2309,8 @@ footer .page-top-button:hover::before {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
   margin-top: 10px;
 }
 .show-news .c-container .c-news-contents .item a .detail::after {
@@ -2396,6 +2399,9 @@ footer .page-top-button:hover::before {
     min-height: 100%;
     max-height: 100%;
     font-weight: 400;
+  }
+  .show-news .c-container .c-news-contents .item a .detail {
+    display: none;
   }
   .show-news .c-container .c-news-contents .item a:hover .title {
     min-height: 100%;
