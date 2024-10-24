@@ -26,8 +26,8 @@ Web上で配布された制作課題を元に、<u>**架空企業のコーポレ
 ## デザインについて
 
 <p>
-  <img src="https://github.com/user-attachments/assets/e371235a-90b9-4d75-bdc2-f7a5e3f95a5b" alt="PC版" width="480" style="display:inline-block; vertical-align: middle;"/>
-  <img src="https://github.com/user-attachments/assets/48a8b056-71e8-4fe5-9242-7e52daaaa879" alt="SP版" width="480" style="display:inline-block; vertical-align: middle;"/>
+  <img src="https://github.com/user-attachments/assets/e371235a-90b9-4d75-bdc2-f7a5e3f95a5b" alt="PC版" width="390" style="display:inline-block; vertical-align: middle;"/>
+  <img src="https://github.com/user-attachments/assets/48a8b056-71e8-4fe5-9242-7e52daaaa879" alt="SP版" width="390" style="display:inline-block; vertical-align: middle;"/>
 </p>
 
 実際のデザインカンプをみる(Figma、閲覧のみ可): [Comparison_Inc: author Fuchsia(ふーしゃ)](https://www.figma.com/design/tsiofD2hs1Wy7ITxL5YIlP/Comparison_Inc?node-id=65-3743&t=65KclQztucy8mZuu-1)
