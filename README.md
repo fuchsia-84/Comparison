@@ -19,7 +19,7 @@ Web上で配布された制作課題を元に、<u>**架空企業のコーポレ
 
 ## 成果物
 
-<img width="796" alt="Comparison トップページ" src="https://github.com/user-attachments/assets/7c4d4caa-63a4-4872-9da0-f5784cdc445f">
+<img width="796" alt="Comparison トップページ" src="https://github.com/user-attachments/assets/b82f152d-1260-4764-b9a3-916843188086">
 
 実際のサイトをみる: [Comparison | トップページ](https://comparison-fuchsia.netlify.app/)
 
