@@ -3251,7 +3251,7 @@ footer .page-top-button:hover::before {
 }
 .show-contact .c-container .c-container {
   width: 100%;
-  padding: 100px 0;
+  padding: 31px 0 100px; /* fix for honeypot*/
   background-color: var(--color-contact-bg);
   display: flex;
   flex-wrap: wrap;
@@ -3279,6 +3279,9 @@ footer .page-top-button:hover::before {
 }
 .show-contact .c-container .c-container form .form-item {
   width: 100%;
+}
+.show-contact .c-container .c-container form .form-item .hidden {
+  visibility: hidden;
 }
 .show-contact .c-container .c-container form .form-item label:first-of-type {
   font-size: 1rem;
@@ -3387,7 +3390,7 @@ footer .page-top-button:hover::before {
   .show-contact .c-container .c-container {
     width: 100%;
     max-width: 100%;
-    padding: 80px 0;
+    padding: 11px 0 80px; /* fix for honeypot*/
   }
 }
 @media screen and (max-width: 756px) {

@@ -16,7 +16,7 @@
 
         .c-container {
             width: 100%;
-            padding: 100px 0;
+            padding: 31px 0 100px; /* fix for honeypot*/
             background-color: var(--color-contact-bg);
             display: flex;
             flex-wrap: wrap;
@@ -43,6 +43,9 @@
                 row-gap: 30px;
                 .form-item {
                     width: 100%;
+                    .hidden {
+                        visibility: hidden;
+                    }
                     label:first-of-type {
                         font-size: 1.0rem;
                         line-height: 1.5rem;
@@ -148,7 +151,7 @@
             .c-container {
                 width: 100%;
                 max-width: 100%;
-                padding: 80px 0;
+                padding: 11px 0 80px; /* fix for honeypot*/
             }
         }
     }
