@@ -59,7 +59,9 @@ Web上で配布された制作課題を元に、<u>**架空企業のコーポレ
 
 - Windows 11
 - VSCode
-- Adobe Photoshop 2023
+- Netlify
+- Photoshop
+- Illustrator
 - Figma
 
 ## 動作確認
@@ -75,6 +77,7 @@ Web上で配布された制作課題を元に、<u>**架空企業のコーポレ
 
 - Windows 11
 - iPhone XR
+- iPhone 16 Pro
 
 ## 未実施事項
 
@@ -83,13 +86,15 @@ Web上で配布された制作課題を元に、<u>**架空企業のコーポレ
 
 ## 制作まとめ記事
 
-更新予定
+- [コーポレートサイトをデザイン！株式会社PENGINの実践課題にチャレンジ - ふーしゃのWeb制作ブログ](https://fuchsia-84.hatenablog.com/entry/2024/12/19/200000)
+- [コーポレートサイトを制作！株式会社PENGINの実践課題、コーディングにチャレンジ - ふーしゃのWeb制作ブログ](https://fuchsia-84.hatenablog.com/entry/2024/12/23/200000)
 
 ## 参考(使用ツール等)
 
-- [ress.css(GitHub)](https://github.com/filipelinhares/ress)
+- [Adobe Stock](https://stock.adobe.com/jp/)
 - [Google Fonts](https://fonts.google.com/)
 - [Material Icons](https://fonts.google.com/icons)
 - [Font Awesome](https://fontawesome.com/)
+- [ress.css(GitHub)](https://github.com/filipelinhares/ress)
 - [Slick](https://kenwheeler.github.io/slick/)
-- [Adobe Stock](https://stock.adobe.com/jp/)
+- [動くWebデザインアイディア帳](https://ugokuweb.coco-factory.jp/)
