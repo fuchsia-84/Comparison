@@ -3327,7 +3327,8 @@ footer .page-top-button:hover::before {
   margin-right: 5px;
 }
 .show-contact .c-container .c-container form .form-item textarea {
-  width: 600px;
+  max-width: 600px;
+  width: 100%;
   height: 255px;
   border-radius: 5px;
   margin-top: 5px;
@@ -3392,6 +3393,9 @@ footer .page-top-button:hover::before {
     max-width: 100%;
     padding: 11px 0 80px; /* fix for honeypot*/
   }
+  .show-contact .c-container .c-container form textarea {
+    max-width: 100%;
+  }
 }
 @media screen and (max-width: 756px) {
   .show-contact .c-container h1 {
@@ -3414,9 +3418,6 @@ footer .page-top-button:hover::before {
     margin: 10px auto 0;
   }
   .show-contact .c-container .c-container form .form-item .radio-input label {
-    width: 100%;
-  }
-  .show-contact .c-container .c-container form .form-item textarea {
     width: 100%;
   }
 }
