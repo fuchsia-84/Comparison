@@ -100,7 +100,7 @@
             <div class="c-container">
                 <h1>WEBコンサルティングのご依頼やお見積り、当社についてのご質問など、どうぞお気軽にお知らせください。</h1>
                 <div class="c-container">
-                    <form name="contact-form" method="POST" autocomplete="off" netlify-honeypot="bot-field" data-netlify="true">
+                    <form name="contact-form" method="POST" autocomplete="off" netlify-honeypot="bot-field" data-netlify-recaptcha="true" data-netlify="true">
                         <!-- honeypot field -->
                         <div class="form-item">
                             <p class="hidden">
@@ -138,6 +138,11 @@
                         <div class="form-item">
                             <input class="checkbox" type="checkbox" id="agree" /><label for="agree"><a class="privacy-policy-link" href="./privacy_policy" onclick="window.open('privacy_policy.html', '', 'width=100%,scrollbars=yes'); return false;">プライバシーポリシー</a>に同意する<span class="required"></span><br/></label>
                         </div>
+                        <!-- recaptcha -->
+                        <div class="form-item">
+                            <div data-netlify-recaptcha="true"></div>
+                        </div>
+                        <!-- //recaptcha-->
                         <div class="form-item">
                             <button class="c-button submit" type="submit" id="submit" disabled>同意して送信</button>
                         </div>
