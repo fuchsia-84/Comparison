@@ -100,7 +100,14 @@
             <div class="c-container">
                 <h1>WEBコンサルティングのご依頼やお見積り、当社についてのご質問など、どうぞお気軽にお知らせください。</h1>
                 <div class="c-container">
-                    <form name="contact-form" method="POST" autocomplete="off" data-netlify="true">
+                    <form name="contact-form" method="POST" autocomplete="off" netlify-honeypot="bot-field" data-netlify="true">
+                        <!-- honeypot field -->
+                        <div class="form-item hidden">
+                            <label>
+                                Don’t fill this out if you’re human: <input name="bot-field" />
+                            </label>
+                        </div>
+                        <!-- //honeypot field -->
                         <div class="form-item">
                             <label for="type">お問い合わせ種別<span class="required"></span><br/></label>
                             <div class="radio-input">
