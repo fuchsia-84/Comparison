@@ -778,6 +778,7 @@ body {
   line-height: 1em;
   letter-spacing: 0.02em;
   margin-right: 30px;
+  text-transform: uppercase;
 }
 .c-page-header .c-container span {
   display: inline-block;
