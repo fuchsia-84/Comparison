@@ -564,6 +564,7 @@ body {
   line-height: 1.5em;
   letter-spacing: 0.05em;
   font-weight: 900;
+  text-transform: uppercase;
 }
 .c-section-title h1::after {
   display: inline-block;
@@ -636,6 +637,7 @@ body {
   font-size: 4rem;
   line-height: 1.5em;
   font-weight: 900;
+  text-transform: uppercase;
 }
 .c-bottom-section-title h1::after {
   content: "";
@@ -1463,6 +1465,7 @@ header.open .c-container .navigations .c-nav {
 .news .c-container .news-header div h1 {
   font-size: 2.25rem;
   line-height: 1em;
+  text-transform: uppercase;
 }
 .news .c-container .news-header div p {
   font-size: 1.125rem;
